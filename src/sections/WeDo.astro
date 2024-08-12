@@ -1,0 +1,242 @@
+---
+import projectsData from "../data/projects.json";
+---
+
+<!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
+<section id="cta-1073">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <h2 class="cs-title">Our Latest Projects</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        {
+          projectsData.projects.map((project) => (
+            <div class="card-item">
+              <div class="card-image">
+                <img
+                  src={project.image}
+                  alt="Mint Mantis Joe Charley"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <div class="card-text">
+                <div class="card-text-section">
+                  <h3 class="card-text-title">{project.title}</h3>
+                  <p>{project.subtitle}</p>
+                  <p class="">{project.description}</p>
+                </div>
+                <div class="cs-button-box">
+                  <a href={project.link} class="cs-button-transparent">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-1073 {
+      padding: var(--sectionPadding);
+      background-color: var(--bgColor2);
+      position: relative;
+      z-index: 1;
+    }
+    #cta-1073 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #cta-1073 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #cta-1073 .cs-flex {
+      max-width: 1200px;
+    }
+
+    #cta-1073 .cs-title {
+      margin: 0;
+
+      color: var(--bodyTextColorWhite);
+    }
+    #cta-1073 .cs-button-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    #cta-1073 .cs-button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+    }
+    #cta-1073 .cs-button-solid:hover:before {
+      width: 100%;
+    }
+    #cta-1073 .cs-button-transparent {
+      font-size: 1rem;
+      /* 46px - 56px */
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      background-color: transparent;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      transition: color 0.3s;
+      border-style: solid;
+      border-color: #b0c929;
+      border-radius: 8px;
+      padding: 16px 032px 016px 032px;
+    }
+    #cta-1073 .cs-button-transparent:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: var(--buttonColor);
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+      border-radius: 8px;
+    }
+    #cta-1073 .cs-button-transparent:after {
+      /* border */
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      border: 1px solid #b0c929;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+      pointer-events: none;
+      border-radius: 8px;
+    }
+    #cta-1073 .cs-button-transparent:hover {
+      color: var(--headerColor);
+    }
+    #cta-1073 .cs-button-transparent:hover:before {
+      width: 100%;
+    }
+    #cta-1073 .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    #cta-1073 .cs-background:before {
+      /* background color overlay */
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #1a1a1a;
+      opacity: 0.88;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    #cta-1073 .cs-background img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* Makes img tag act as a background image */
+      object-fit: cover;
+    }
+  }
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background-color: #c9df4d1a;
+    color: var(--bodyTextColorWhite);
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  .card-text {
+    margin-left: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 1rem;
+  }
+  .card-text-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    max-width: 20ch;
+  }
+
+  .card-image img {
+    max-width: 150px;
+    height: auto;
+  }
+  @media screen and (min-width: 700px) {
+    .card-item {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+    #cta-1073 .cs-button-box {
+      justify-content: left;
+    }
+  }
+</style>
