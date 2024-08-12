@@ -1,134 +1,122 @@
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-
-<header id="cs-navigation" class="block sm:hidden"
-    <div class="cs-container">
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                </div>
-            </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link cs-active">
-                           Projects
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                           We are
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                           We do
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                           Services
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                        Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
+<header id="cs-navigation" class="block sm:hidden">
+  <div class="cs-container">
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <li class="cs-li">
+            <a href="#projects" class="cs-li-link cs-active"> Projects</a>
+          </li>
+          <!-- <li class="cs-li">
+            <a href="" class="cs-li-link"> We are</a>
+          </li> -->
+          <li class="cs-li">
+            <a href="#wedo" class="cs-li-link"> We do</a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Services</a>
+          </li>
+          <li class="cs-li">
+            <a href="/contact" class="cs-li-link"> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
-<script>
-// add classes for mobile navigation toggling
-var CSbody = document.querySelector("body");
+  <script>
+    // add classes for mobile navigation toggling
+    var CSbody = document.querySelector("body");
     const CSnavbarMenu = document.querySelector("#cs-navigation");
     const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
 
-    CShamburgerMenu.addEventListener('click', function() {
-        CShamburgerMenu.classList.toggle("cs-active");
-        CSnavbarMenu.classList.toggle("cs-active");
-        CSbody.classList.toggle("cs-open");
-        // run the function to check the aria-expanded value
-        ariaExpanded();
+    CShamburgerMenu.addEventListener("click", function () {
+      CShamburgerMenu.classList.toggle("cs-active");
+      CSnavbarMenu.classList.toggle("cs-active");
+      CSbody.classList.toggle("cs-open");
+      // run the function to check the aria-expanded value
+      ariaExpanded();
     });
 
-    // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not 
+    // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
     function ariaExpanded() {
-        const csUL = document.querySelector('#cs-expanded');
-        const csExpanded = csUL.getAttribute('aria-expanded');
+      const csUL = document.querySelector("#cs-expanded");
+      const csExpanded = csUL.getAttribute("aria-expanded");
 
-        if (csExpanded === 'false') {
-            csUL.setAttribute('aria-expanded', 'true');
-        } else {
-            csUL.setAttribute('aria-expanded', 'false');
-        }
+      if (csExpanded === "false") {
+        csUL.setAttribute("aria-expanded", "true");
+      } else {
+        csUL.setAttribute("aria-expanded", "false");
+      }
     }
 
     // This script adds a class to the body after scrolling 100px
-    // and we used these body.scroll styles to create some on scroll 
+    // and we used these body.scroll styles to create some on scroll
     // animations with the navbar
-    
-    document.addEventListener('scroll', (e) => { 
-        const scroll = document.documentElement.scrollTop;
-        if(scroll >= 100){
-    document.querySelector('body').classList.add('scroll')
-        } else {
-        document.querySelector('body').classList.remove('scroll')
-        }
+
+    document.addEventListener("scroll", (e) => {
+      const scroll = document.documentElement.scrollTop;
+      if (scroll >= 100) {
+        document.querySelector("body").classList.add("scroll");
+      } else {
+        document.querySelector("body").classList.remove("scroll");
+      }
     });
 
     // mobile nav toggle code
-    const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
-        for (const item of dropDowns) {
-            const onClick = () => {
-            item.classList.toggle('cs-active')
-        }
-        item.addEventListener('click', onClick)
-        }
-                                	
-</script>         
+    const dropDowns = Array.from(
+      document.querySelectorAll("#cs-navigation .cs-dropdown")
+    );
+    for (const item of dropDowns) {
+      const onClick = () => {
+        item.classList.toggle("cs-active");
+      };
+      item.addEventListener("click", onClick);
+    }
+  </script>
 
-<style>
-/*-- -------------------------- -->
+  <style>
+    /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
 
-body,
-html {
-    /* reset margin and padding so there's no gap between the nav and the screen edges */
-    margin: 0;
-       padding: 0;
-}
-
-/* Mobile - 1023px */
-@media only screen and (max-width: 63.9375rem) {
-    body.cs-open {
-        overflow: hidden;
+    body,
+    html {
+      /* reset margin and padding so there's no gap between the nav and the screen edges */
+      margin: 0;
+         padding: 0;
     }
-    body.cs-open #cs-navigation:after {
+
+    /* Mobile - 1023px */
+    @media only screen and (max-width: 63.9375rem) {
+      body.cs-open {
+        overflow: hidden;
+      }
+      body.cs-open #cs-navigation:after {
         width: 100%;
         opacity: 1;
-    }
-    body.scroll #cs-navigation:after {
+      }
+      body.scroll #cs-navigation:after {
         width: 100%;
-    }
-    #cs-navigation {
+      }
+      #cs-navigation {
         width: 100%;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         position: fixed;
         z-index: 10000;
-    }
-    #cs-navigation:before {
+      }
+      #cs-navigation:before {
         /* mobile nav overlay on open */
         content: "";
         width: 0%;
@@ -142,11 +130,9 @@ html {
         top: 100%;
         right: 0;
         z-index: -11;
-        transition:
-            width 0.5s,
-            opacity 0.3s;
-    }
-    #cs-navigation:after {
+        transition: width 0.5s, opacity 0.3s;
+      }
+      #cs-navigation:after {
         /* on scroll overlay */
         content: "";
         width: 0%;
@@ -158,24 +144,22 @@ html {
         top: 0;
         left: 0;
         z-index: -1;
-        transition:
-            width 0.3s,
-            opacity 0.3s;
-    }
-    #cs-navigation.cs-active:before {
+        transition: width 0.3s, opacity 0.3s;
+      }
+      #cs-navigation.cs-active:before {
         width: 100%;
         opacity: 1;
-    }
-    #cs-navigation.cs-active .cs-ul-wrapper {
+      }
+      #cs-navigation.cs-active .cs-ul-wrapper {
         opacity: 1;
         transform: scaleX(1);
         transition-delay: 0.2s;
-    }
-    #cs-navigation.cs-active .cs-li {
+      }
+      #cs-navigation.cs-active .cs-li {
         transform: translateX(0);
         opacity: 1;
-    }
-    #cs-navigation .cs-container {
+      }
+      #cs-navigation .cs-container {
         width: 100%;
         padding: 1rem;
         /* prevents padding and border from affecting height and width */
@@ -183,8 +167,8 @@ html {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-    #cs-navigation .cs-toggle {
+      }
+      #cs-navigation .cs-toggle {
         width: 3.75rem;
         height: 3.75rem;
         margin: 0 0 0 auto;
@@ -192,27 +176,27 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    #cs-navigation .cs-active .cs-line1 {
+      }
+      #cs-navigation .cs-active .cs-line1 {
         top: 50%;
         transform: translate(-50%, -50%) rotate(225deg);
-    }
-    #cs-navigation .cs-active .cs-line2 {
+      }
+      #cs-navigation .cs-active .cs-line2 {
         top: 50%;
         transform-origin: center;
         transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
-    }
-    #cs-navigation .cs-active .cs-line3 {
+      }
+      #cs-navigation .cs-active .cs-line3 {
         bottom: 100%;
         opacity: 0;
-    }
-    #cs-navigation .cs-box {
+      }
+      #cs-navigation .cs-box {
         /* 24px - 28px */
         width: clamp(1.95rem, 2vw, 1.75rem);
         height: 1.3rem;
         position: relative;
-    }
-    #cs-navigation .cs-line {
+      }
+      #cs-navigation .cs-line {
         width: 100%;
         height: 4px;
         border-radius: 2px;
@@ -220,38 +204,30 @@ html {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-    }
-    #cs-navigation .cs-line1 {
+      }
+      #cs-navigation .cs-line1 {
         top: 0;
         transform-origin: center;
-        transition:
-            transform 0.5s,
-            top 0.3s,
-            left 0.3s;
+        transition: transform 0.5s, top 0.3s, left 0.3s;
         animation-duration: 0.7s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
         animation-direction: normal;
-    }
-    #cs-navigation .cs-line2 {
+      }
+      #cs-navigation .cs-line2 {
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        transition:
-            top 0.3s,
-            left 0.3s,
-            transform 0.5s;
+        transition: top 0.3s, left 0.3s, transform 0.5s;
         animation-duration: 0.7s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
         animation-direction: normal;
-    }
-    #cs-navigation .cs-line3 {
+      }
+      #cs-navigation .cs-line3 {
         bottom: 0;
-        transition:
-            bottom 0.3s,
-            opacity 0.3s;
-    }
-    #cs-navigation .cs-ul-wrapper {
+        transition: bottom 0.3s, opacity 0.3s;
+      }
+      #cs-navigation .cs-ul-wrapper {
         min-width: 70vw;
         height: 100vh;
         opacity: 0;
@@ -265,11 +241,9 @@ html {
         z-index: -1;
         transform: scaleX(0);
         transform-origin: top right;
-        transition:
-            transform 0.4s,
-            opacity 0.3s;
-    }
-    #cs-navigation .cs-ul {
+        transition: transform 0.4s, opacity 0.3s;
+      }
+      #cs-navigation .cs-ul {
         margin: 0;
         /* 28px - 40px */
         padding: 3rem clamp(1.75rem, 3vw, 2.5rem) 2rem 4.375rem;
@@ -282,8 +256,8 @@ html {
         flex-direction: column;
         align-items: flex-end;
         gap: 1.25rem;
-    }
-    #cs-navigation .cs-li {
+      }
+      #cs-navigation .cs-li {
         text-align: right;
         list-style: none;
         width: 100%;
@@ -291,38 +265,36 @@ html {
         /* transition from these values */
         transform: translateX(-2.5rem);
         opacity: 0;
-        transition:
-            transform 0.6s,
-            opacity 0.9s;
-    }
-    #cs-navigation .cs-li:nth-of-type(1) {
+        transition: transform 0.6s, opacity 0.9s;
+      }
+      #cs-navigation .cs-li:nth-of-type(1) {
         transition-delay: 0.05s;
-    }
-    #cs-navigation .cs-li:nth-of-type(2) {
+      }
+      #cs-navigation .cs-li:nth-of-type(2) {
         transition-delay: 0.1s;
-    }
-    #cs-navigation .cs-li:nth-of-type(3) {
+      }
+      #cs-navigation .cs-li:nth-of-type(3) {
         transition-delay: 0.15s;
-    }
-    #cs-navigation .cs-li:nth-of-type(4) {
+      }
+      #cs-navigation .cs-li:nth-of-type(4) {
         transition-delay: 0.2s;
-    }
-    #cs-navigation .cs-li:nth-of-type(5) {
+      }
+      #cs-navigation .cs-li:nth-of-type(5) {
         transition-delay: 0.25s;
-    }
-    #cs-navigation .cs-li:nth-of-type(6) {
+      }
+      #cs-navigation .cs-li:nth-of-type(6) {
         transition-delay: 0.3s;
-    }
-    #cs-navigation .cs-li:nth-of-type(7) {
+      }
+      #cs-navigation .cs-li:nth-of-type(7) {
         transition-delay: 0.35s;
-    }
-    #cs-navigation .cs-li:nth-of-type(8) {
+      }
+      #cs-navigation .cs-li:nth-of-type(8) {
         transition-delay: 0.4s;
-    }
-    #cs-navigation .cs-li:nth-of-type(9) {
+      }
+      #cs-navigation .cs-li:nth-of-type(9) {
         transition-delay: 0.45s;
-    }
-    #cs-navigation .cs-li-link {
+      }
+      #cs-navigation .cs-li-link {
         /* 16px - 24px */
         font-size: clamp(1rem, 2.5vw, 1.5rem);
         line-height: 1.2em;
@@ -331,8 +303,8 @@ html {
         color: var(--bodyTextColorWhite);
         display: inline-block;
         position: relative;
-    }
-    #cs-navigation .cs-li-link:before {
+      }
+      #cs-navigation .cs-li-link:before {
         /* active state underline */
         content: "";
         width: 100%;
@@ -343,36 +315,36 @@ html {
         display: none;
         bottom: -0.125rem;
         left: 0;
-    }
-    #cs-navigation .cs-li-link.cs-active {
+      }
+      #cs-navigation .cs-li-link.cs-active {
         color: var(--secondary);
-    }
-    #cs-navigation .cs-li-link.cs-active:before {
+      }
+      #cs-navigation .cs-li-link.cs-active:before {
         display: block;
-    }
-    #cs-navigation .cs-button-solid {
+      }
+      #cs-navigation .cs-button-solid {
         display: none;
+      }
     }
-}
 
-/*-- -------------------------- -->
+    /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
 
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    body.scroll #cs-navigation:after {
+    /* Small Desktop - 1024px */
+    @media only screen and (min-width: 64rem) {
+      body.scroll #cs-navigation:after {
         height: 100%;
-    }
-    #cs-navigation {
+      }
+      #cs-navigation {
         width: 100%;
         padding: 0;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         position: fixed;
         z-index: 10000;
-    }
-    #cs-navigation:after {
+      }
+      #cs-navigation:after {
         /* on scroll overlay */
         content: "";
         width: 100%;
@@ -384,11 +356,9 @@ html {
         top: 0;
         left: 0;
         z-index: -1;
-        transition:
-            height 0.3s,
-            opacity 0.3s;
-    }
-    #cs-navigation .cs-container {
+        transition: height 0.3s, opacity 0.3s;
+      }
+      #cs-navigation .cs-container {
         width: 100%;
         /* same height as the cs-ul-wrapper */
         height: 5.8125rem;
@@ -402,18 +372,18 @@ html {
         align-items: center;
         gap: 1.5rem;
         position: relative;
-    }
-    #cs-navigation .cs-toggle {
+      }
+      #cs-navigation .cs-toggle {
         display: none;
-    }
-    #cs-navigation .cs-ul-wrapper {
+      }
+      #cs-navigation .cs-ul-wrapper {
         /* absolutely positioned to be dead center */
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-    }
-    #cs-navigation .cs-ul {
+      }
+      #cs-navigation .cs-ul {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -422,14 +392,14 @@ html {
         align-items: center;
         /* 20px - 36px */
         gap: clamp(1.25rem, 2.6vw, 2.25rem);
-    }
-    #cs-navigation .cs-li {
+      }
+      #cs-navigation .cs-li {
         list-style: none;
         padding: 2.25rem 0;
         /* prevent flexbox from squishing it */
         flex: none;
-    }
-    #cs-navigation .cs-li-link {
+      }
+      #cs-navigation .cs-li-link {
         /* 14px - 16px */
         font-size: clamp(0.875rem, 0.6vw, 1rem);
         line-height: 1.5em;
@@ -439,8 +409,8 @@ html {
         display: block;
         position: relative;
         transition: color 0.3s;
-    }
-    #cs-navigation .cs-li-link:before {
+      }
+      #cs-navigation .cs-li-link:before {
         content: "";
         width: 0%;
         height: 1px;
@@ -451,20 +421,20 @@ html {
         bottom: -2px;
         left: 0;
         transition: width 0.3s;
-    }
-    #cs-navigation .cs-li-link:hover {
+      }
+      #cs-navigation .cs-li-link:hover {
         color: var(--secondary);
-    }
-    #cs-navigation .cs-li-link:hover:before {
+      }
+      #cs-navigation .cs-li-link:hover:before {
         width: 100%;
-    }
-    #cs-navigation .cs-li-link.cs-active {
+      }
+      #cs-navigation .cs-li-link.cs-active {
         color: var(--secondary);
-    }
-    #cs-navigation .cs-li-link.cs-active:before {
+      }
+      #cs-navigation .cs-li-link.cs-active:before {
         width: 100%;
-    }
-    #cs-navigation .cs-button-solid {
+      }
+      #cs-navigation .cs-button-solid {
         font-size: 1rem;
         /* 46px - 56px */
         line-height: clamp(2.875em, 5.5vw, 3.5em);
@@ -482,8 +452,8 @@ html {
         /* prevents padding from adding to the width */
         box-sizing: border-box;
         transition: color 0.3s;
-    }
-    #cs-navigation .cs-button-solid:before {
+      }
+      #cs-navigation .cs-button-solid:before {
         content: "";
         position: absolute;
         height: 100%;
@@ -494,17 +464,16 @@ html {
         left: 0;
         z-index: -1;
         transition: width 0.3s;
-    }
-    #cs-navigation .cs-button-solid:hover {
+      }
+      #cs-navigation .cs-button-solid:hover {
         color: #1a1a1a;
-    }
-    #cs-navigation .cs-button-solid:hover:before {
+      }
+      #cs-navigation .cs-button-solid:hover:before {
         width: 100%;
-    }
-    #cs-navigation .cs-nav-button {
+      }
+      #cs-navigation .cs-nav-button {
         line-height: 2.875rem;
+      }
     }
-}
-
-                                	
-</style>
+  </style>
+</header>

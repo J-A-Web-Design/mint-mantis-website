@@ -3,43 +3,45 @@ import projectsData from "../data/projects.json";
 ---
 
 <!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
-<section id="cta-1073">
-  <div class="cs-container">
-    <div class="cs-content">
-      <div class="cs-flex">
-        <h2 class="cs-title">Our Latest Projects</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-12">
-        {
-          projectsData.projects.map((project) => (
-            <div class="card-item">
-              <div class="card-image">
-                <img
-                  src={project.image}
-                  alt="Mint Mantis Joe Charley"
-                  width="150"
-                  height="150"
-                />
-              </div>
-              <div class="card-text">
-                <div class="card-text-section">
-                  <h3 class="card-text-title">{project.title}</h3>
-                  <p>{project.subtitle}</p>
-                  <p class="">{project.description}</p>
-                </div>
-                <div class="cs-button-box">
-                  <a href={project.link} class="cs-button-transparent">
-                    Learn More
-                  </a>
-                </div>
-              </div>
+<div id="projects">
+    <section id="cta-1073">
+        <div class="cs-container">
+          <div class="cs-content">
+            <div class="cs-flex">
+              <h2 class="cs-title">Our Latest Projects</h2>
             </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="grid md:grid-cols-2 gap-12">
+              {
+                projectsData.projects.map((project) => (
+                  <div class="card-item">
+                    <div class="card-image">
+                      <img
+                        src={project.image}
+                        alt="Mint Mantis Joe Charley"
+                        width="150"
+                        height="150"
+                      />
+                    </div>
+                    <div class="card-text">
+                      <div class="card-text-section">
+                        <h3 class="card-text-title">{project.title}</h3>
+                        <p>{project.subtitle}</p>
+                        <p class="">{project.description}</p>
+                      </div>
+                      <div class="cs-button-box">
+                        <a href={project.link} class="cs-button-transparent">
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
 <style>
   /*-- -------------------------- -->
 <---            CTA             -->
