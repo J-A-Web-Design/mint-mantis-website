@@ -7,35 +7,36 @@ import projectsData from "../data/projects.json";
   <div class="cs-container">
     <div class="cs-content">
       <div class="cs-flex">
-        <h2 class="cs-title">Our Latest Projects</h2>
+        <h2 class="cs-title">We Do</h2>
       </div>
-      <div class="grid md:grid-cols-2 gap-12">
-        {
-          projectsData.projects.map((project) => (
-            <div class="card-item">
-              <div class="card-image">
-                <img
-                  src={project.image}
-                  alt="Mint Mantis Joe Charley"
-                  width="150"
-                  height="150"
-                />
-              </div>
-              <div class="card-text">
-                <div class="card-text-section">
-                  <h3 class="card-text-title">{project.title}</h3>
-                  <p>{project.subtitle}</p>
-                  <p class="">{project.description}</p>
-                </div>
-                <div class="cs-button-box">
-                  <a href={project.link} class="cs-button-transparent">
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))
-        }
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="we-do-card">
+          <h3>Talent Discovery</h3>
+          <p>
+            one-on-one Coaching with artists to set goals, understand their
+            unique strengths and values and develop a clear vision for their
+            careers. This includes consulting and workshops.
+          </p>
+        </div>
+
+        <div class="we-do-card">
+          <h3>Artist Brand Development</h3>
+          <p>
+            Create a strong brand and build your audience. Our programs and
+            fan-artist collaborations build artist reputations and convert the
+            brand into a successful business with invested fans.
+          </p>
+        </div>
+
+        <div class="we-do-card">
+          <h3>Scale for Growth</h3>
+          <p>
+            Prepare for fundraising. Get the guidance and support needed to
+            manage the financial and operational aspects of your business.
+            Develop fundraising campaigns and sponsorships.
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -49,7 +50,7 @@ import projectsData from "../data/projects.json";
   @media only screen and (min-width: 0rem) {
     #cta-1073 {
       padding: var(--sectionPadding);
-      background-color: var(--bgColor2);
+      background-color: var(--bgColor);
       position: relative;
       z-index: 1;
     }
@@ -70,7 +71,7 @@ import projectsData from "../data/projects.json";
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
-      align-items: center;
+      align-items: flex-start;
       /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
     }
@@ -80,8 +81,8 @@ import projectsData from "../data/projects.json";
 
     #cta-1073 .cs-title {
       margin: 0;
-
-      color: var(--bodyTextColorWhite);
+      text-align: left;
+      color: var(--headerColor);
     }
     #cta-1073 .cs-button-box {
       display: flex;
@@ -228,6 +229,18 @@ import projectsData from "../data/projects.json";
   .card-image img {
     max-width: 150px;
     height: auto;
+  }
+  .we-do-card{
+    display: flex;
+    flex-direction: column;
+  }
+  .we-do-card h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .we-do-card p {
+    font-size: 1rem;
+    line-height: 1.5;
   }
   @media screen and (min-width: 700px) {
     .card-item {
