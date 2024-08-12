@@ -1,0 +1,34 @@
+{
+  "services": [
+    {
+      "title": "Launchpad",
+      "subtitle": "For Artists & Authors",
+      "description": "Propel careers and projects forward with the right resources and support."
+    },
+    {
+      "title": "Regenerative Tourism",
+      "subtitle": "Solutions",
+      "description": "Hospitality Re-imagined: Moving Beyond Infrastructure to Regeneration."
+    },
+    {
+      "title": "Sales Sigma",
+      "subtitle": "Workshops",
+      "description": "Streamline Your Sales: Master Positioning & Engage with Art."
+    },
+    {
+      "title": "Financial Intelligence 2.0",
+      "subtitle": "Course",
+      "description": "Connect investment principles to the creation process. Become a disciplined storyteller."
+    },
+    {
+      "title": "NestEgg",
+      "subtitle": "Funding Support",
+      "description": "Secure and grow essential capital. Crowdfunding Prep, Sponsorships, Collaborations, & Grants."
+    },
+    {
+      "title": "Custom Solutions",
+      "subtitle": "Services",
+      "description": "Customizable solutions for specific business needs."
+    }
+  ]
+}

@@ -1,39 +1,30 @@
 ---
-import projectsData from "../data/projects.json";
+import servicesData from "../data/services.json";
 ---
 
 <!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
-<div id="projects">
+<div id="services">
     <section id="cta-1073">
         <div class="cs-container">
           <div class="cs-content">
             <div class="cs-flex">
-              <h2 class="cs-title">Our Latest Projects</h2>
+              <h2 class="cs-title">We Offer</h2>
             </div>
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-3 gap-12">
               {
-                projectsData.projects.map((project) => (
-                  <div class="card-item">
-                    <div class="card-image">
-                      <img
-                        src={project.image}
-                        alt="Mint Mantis Joe Charley"
-                        width="150"
-                        height="150"
-                      />
-                    </div>
-                    <div class="card-text">
-                      <div class="card-text-section">
-                        <h3 class="card-text-title">{project.title}</h3>
-                        <p>{project.subtitle}</p>
-                        <p class="">{project.description}</p>
-                      </div>
-                      <div class="cs-button-box">
-                        <a href={project.link} class="cs-button-transparent">
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
+                servicesData.services.map((service) => (
+                  <div class="service-card">
+                   <div class="service-card-body pt-8">
+                    <h3>
+                    {service.title}
+                    </h3>
+                    <p>
+                    {service.subtitle}
+                    </p>
+                    <p>
+                    {service.description}
+                    </p>
+                   </div>
                   </div>
                 ))
               }
@@ -197,45 +188,29 @@ import projectsData from "../data/projects.json";
     }
   }
 
-  .card-item {
+  .service-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     height: 100%;
     background-color: #c9df4d1a;
     color: var(--bodyTextColorWhite);
     padding: 1.5rem;
     border-radius: 20px;
   }
-  .card-text {
-    margin-left: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card-text p {
-    font-size: 1rem;
-    line-height: 1.5;
-    min-height: 1rem;
-  }
-  .card-text-title {
+.service-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    max-width: 20ch;
-  }
-
-  .card-image img {
-    max-width: 150px;
-    height: auto;
+    line-height: 1.2em;
+    margin: 0;
   }
   @media screen and (min-width: 700px) {
-    .card-item {
-      flex-direction: row;
+    .service-card {
       justify-content: space-between;
       text-align: left;
+      align-items: start;
     }
     #cta-1073 .cs-button-box {
       justify-content: left;
