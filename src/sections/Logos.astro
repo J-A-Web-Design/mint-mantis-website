@@ -5,15 +5,14 @@
 <section id="logos-857">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Coverage</span>
-            <h2 class="cs-title">Use Your Insurance</h2>
+            <h2 class="cs-title">Our Partners</h2>
         </div>
         <div class="cs-logo-group">
             <!--Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes-->
-            <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos%2Flogo5.png" alt="logo" width="150" height="65" loading="lazy" decoding="async">
-            <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos%2Flogo6.png" alt="logo" width="150" height="55" loading="lazy" decoding="async">
-            <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos%2Flogo7.png" alt="logo" width="150" height="53" loading="lazy" decoding="async">
-            <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos%2Flogo8.png" alt="logo" width="150" height="61" loading="lazy" decoding="async">
+            <img class="cs-logo" src="/src/assets/publishizer-logo.webp" alt="logo" width="150" height="65" loading="lazy" decoding="async">
+            <img class="cs-logo" src="/src/assets/the-dock-logo.webp" alt="logo" width="150" height="55" loading="lazy" decoding="async">
+            <img class="cs-logo" src="/src/assets/inclusivitea-lgo.webp" alt="logo" width="150" height="53" loading="lazy" decoding="async">
+            <img class="cs-logo" src="/src/assets/still-logo-black.webp" alt="logo" width="150" height="61" loading="lazy" decoding="async">
            
         </div>
     </div>
@@ -27,7 +26,7 @@
 @media only screen and (min-width: 0rem) {
     #logos-857 {
         padding: var(--sectionPadding);
-        background-color: #f7f7f7;
+        background-color: var(--bgColor3);
     }
     #logos-857 .cs-container {
         width: 100%;
@@ -47,11 +46,12 @@
         display: flex;
         flex-direction: column;
         /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
+        align-items: flex-start;
     }
 
     #logos-857 .cs-title {
         margin: 0;
+        text-align: left;
     }
     #logos-857 .cs-logo-group {
         display: flex;
@@ -67,11 +67,20 @@
         margin: 0;
         display: block;
     }
+     .cs-logo-group img{
+        filter: brightness( 100% ) contrast( 0% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+    }
+    .cs-logo-group img:hover{
+        filter: unset;
+    }
 }
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #logos-857 .cs-container {
         max-width: 80rem;
+    }
+    #logos-857 .cs-logo-group {
+    gap: 12.5rem;
     }
 }    
 </style>                              
