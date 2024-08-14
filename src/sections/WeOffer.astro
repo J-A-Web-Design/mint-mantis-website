@@ -4,34 +4,33 @@ import servicesData from "../data/services.json";
 
 <!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
 <div id="services">
-    <section id="cta-1073">
-        <div class="cs-container">
-          <div class="cs-content">
-            <div class="cs-flex">
-              <h2 class="cs-title">We Offer</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-12">
-              {
-                servicesData.services.map((service) => (
-                  <div class="service-card">
-                   <div class="service-card-body pt-8">
-                    <h3>
-                    {service.title}
-                    </h3>
-                    <p>
-                    {service.subtitle}
-                    </p>
-                    <p>
-                    {service.description}
-                    </p>
-                   </div>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
+  <section id="cta-1073">
+    <div class="cs-container">
+      <div class="cs-content">
+        <div class="cs-flex">
+          <h2 class="cs-title">We Offer</h2>
         </div>
-      </section>
+        <div class="grid md:grid-cols-3 gap-12">
+          {
+            servicesData.services.map((service) => (
+              <div class="service-card">
+                <div class="service-card-body pt-8">
+                 <div class="service-card-header">
+                  <h3>{service.title}</h3>
+                  <p>{service.subtitle}</p>
+                 </div>
+                  <p>{service.description}</p>
+                  <a href={service.link} class="cs-button-solid">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <style>
   /*-- -------------------------- -->
@@ -82,7 +81,9 @@ import servicesData from "../data/services.json";
       justify-content: center;
       gap: 1rem;
     }
-
+    #cta-1073 .cs-button-solid{
+      width: fit-content;
+    }
     #cta-1073 .cs-button-solid:before {
       content: "";
       position: absolute;
@@ -96,63 +97,6 @@ import servicesData from "../data/services.json";
       transition: width 0.3s;
     }
     #cta-1073 .cs-button-solid:hover:before {
-      width: 100%;
-    }
-    #cta-1073 .cs-button-transparent {
-      font-size: 1rem;
-      /* 46px - 56px */
-      text-decoration: none;
-      font-weight: 700;
-      text-align: center;
-      margin: 0;
-      color: #fff;
-      min-width: 9.375rem;
-      background-color: transparent;
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      /* prevents padding from adding to the width */
-      box-sizing: border-box;
-      transition: color 0.3s;
-      border-style: solid;
-      border-color: #b0c929;
-      border-radius: 8px;
-      padding: 16px 032px 016px 032px;
-    }
-    #cta-1073 .cs-button-transparent:before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 0%;
-      background: var(--buttonColor);
-      opacity: 1;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: width 0.3s;
-      border-radius: 8px;
-    }
-    #cta-1073 .cs-button-transparent:after {
-      /* border */
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: transparent;
-      /* prevents padding from adding to the width */
-      box-sizing: border-box;
-      border: 1px solid #b0c929;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: width 0.3s;
-      pointer-events: none;
-      border-radius: 8px;
-    }
-    #cta-1073 .cs-button-transparent:hover {
-      color: var(--headerColor);
-    }
-    #cta-1073 .cs-button-transparent:hover:before {
       width: 100%;
     }
     #cta-1073 .cs-background {
@@ -191,8 +135,8 @@ import servicesData from "../data/services.json";
   .service-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     text-align: left;
     height: 100%;
     background-color: #c9df4d1a;
@@ -200,7 +144,13 @@ import servicesData from "../data/services.json";
     padding: 1.5rem;
     border-radius: 20px;
   }
-.service-card h3 {
+  .service-card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .service-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2em;
@@ -216,7 +166,7 @@ import servicesData from "../data/services.json";
       justify-content: left;
     }
     #cta-1073 .cs-content {
-        align-items: flex-start;
-        }
+      align-items: flex-start;
+    }
   }
 </style>
