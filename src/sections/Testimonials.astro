@@ -1,0 +1,237 @@
+---
+import InButton from "../components/ui/InButton.astro";
+---
+
+<!-- ============================================ --><!--                   Reviews                    --><!-- ============================================ -->
+<section id="reviews-67">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title capitalize">Our client's experience</h2>
+      <!-- <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+            </p> -->
+    </div>
+    <ul class="cs-card-group">
+      <!-- Review 1 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://ik.imagekit.io/azupnt3mqx/Joe_Charley_Mint-Mantis.webp"
+          alt="profile picture"
+          width="150"
+          height="150"
+        />
+        <p class="cs-item-text">
+          I am thrilled to share how Mint Mantis, Inc. transformed my journey
+          from a contracted artist to a confident business owner. Their seamless
+          support and tools made the transition smooth, providing invaluable
+          guidance in navigating the business side of the entertainment
+          industry. Mint Mantis, Inc.’s unique approach of merging art and
+          commerce has given me the confidence to negotiate deals and secure
+          sponsorships. This partnership has not only elevated my business but
+          also empowered me with control and confidence. I wholeheartedly
+          recommend Mint Mantis, Inc. to any creative individual looking to take
+          charge of their business in the entertainment industry.
+        </p>
+        <div class="cs-info">
+          <div class="cs-flex-group">
+            <span class="cs-name">Jon Charley</span>
+            <span class="cs-desc">Singer, Actor,Model</span>
+            <div class="mt-8 !text-black uppercase">
+                <InButton title="About Joe" link="#" />
+              </div>
+          </div>
+        </div>
+      </li>
+      <!-- Review 2 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://ik.imagekit.io/azupnt3mqx/Lori-Myren-Mint-Mantis-Testimonial.webp"
+          alt="profile picture"
+          width="150"
+          height="150"
+        />
+        <p class="cs-item-text">
+          About a year ago, I was introduced to Ari from Mint Mantis, whose
+          mission is to help artists move their art to the next level. Within
+          weeks of meeting each other, and with the help of Ari’s cohort, Yana,
+          we decided to add QR codes to the book, changing it from a static
+          coffee table book of tips to a living, breathing, ever-evolving book
+          on sustainable living. We also changed the name to “We Can Save the
+          World…Mars Can Wait,” a better reflection on the tone of the book and
+          the sense of community we hope to build.
+        </p>
+        <div class="cs-info">
+          <div class="cs-flex-group">
+            <span class="cs-name">Lori Myren-Manbeck</span>
+            <span class="cs-desc"
+              >P.H.D Author and Sustainability Enthusiast</span
+            >
+            <div class="mt-8 !text-black uppercase">
+              <InButton title="About Lori" link="#" />
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<style>
+  /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #reviews-67 {
+      padding: var(--sectionPadding);
+    }
+    #reviews-67 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #reviews-67 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+
+    #reviews-67 .cs-card-group {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      column-gap: 1.25rem;
+      row-gap: 4rem;
+    }
+    #reviews-67 .cs-item {
+      text-align: left;
+      list-style: none;
+      width: 100%;
+      max-width: 39.375rem;
+      /* pushes up the same amount the cs-item-img overlaps the card */
+      margin: 2.5rem 0 0 0;
+      /* Padding L & R - 16px - 32px */
+      padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
+      /* 32px - 40px */
+      padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
+      box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+      border-radius: 0.25rem;
+      background: #fff;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      /* Prevents padding from affecting height & width */
+      box-sizing: border-box;
+    }
+    #reviews-67 .cs-item:last-of-type {
+      margin-bottom: 0;
+    }
+    #reviews-67 .cs-item-img {
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      top: -5.5rem;
+    }
+    #reviews-67 .cs-item-text {
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin: 0 0 1.25rem;
+      padding-bottom: 1.25rem;
+      color: var(--bodyTextColor);
+      border-bottom: 1px solid #e8e9ec;
+    }
+    #reviews-67 .cs-info {
+      width: 100%;
+      /* margin-top auto pushes up against the rest of the card, that way when one card has more text than the other, the reviewer info is always pushed to the bottom and lined up with the rest of them.  This ensures better responsiveness for changing content */
+      margin: auto 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #reviews-67 .cs-flex-group {
+      width: 100%;
+      margin: 0;
+    }
+    #reviews-67 .cs-name {
+      font-size: 1rem;
+      line-height: 1.5em;
+      font-weight: 700;
+      width: 40%;
+      margin: 0;
+      display: block;
+      color: var(--headerColor);
+    }
+    #reviews-67 .cs-desc {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #7d799c;
+      display: block;
+    }
+
+    #reviews-67 .cs-button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      background-color: var(--primary);
+      border-radius: 0.25rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+    }
+    #reviews-67 .cs-button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 0.25rem;
+      transition: width 0.3s;
+    }
+    #reviews-67 .cs-button-solid:hover:before {
+      width: 100%;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #reviews-67 .cs-card-group {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    #reviews-67 .cs-title {
+      max-width: 50rem;
+    }
+  }
+</style>

@@ -4,37 +4,37 @@
       "title": "Launchpad",
       "subtitle": "For Artists & Authors",
       "description": "Propel careers and projects forward with the right resources and support.",
-      "link":""
+      "link":"/launchpad"
     },
     {
       "title": "Regenerative Tourism",
       "subtitle": "Solutions",
       "description": "Hospitality Re-imagined: Moving Beyond Infrastructure to Regeneration.",
-       "link":""
+       "link":"/"
     },
     {
       "title": "Sales Sigma",
       "subtitle": "Workshops",
       "description": "Streamline Your Sales: Master Positioning & Engage with Art.",
-       "link":""
+       "link":"/sales-sigma"
     },
     {
       "title": "Financial Intelligence 2.0",
       "subtitle": "Course",
       "description": "Connect investment principles to the creation process. Become a disciplined storyteller.",
-       "link":""
+       "link":"financial-intelligence"
     },
     {
       "title": "NestEgg",
       "subtitle": "Funding Support",
       "description": "Secure and grow essential capital. Crowdfunding Prep, Sponsorships, Collaborations, & Grants.",
-       "link":""
+       "link":"/"
     },
     {
       "title": "Custom Solutions",
       "subtitle": "Services",
       "description": "Customizable solutions for specific business needs.",
-       "link":""
+       "link":"/"
     }
   ]
 }

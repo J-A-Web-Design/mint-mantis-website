@@ -1,3 +1,6 @@
+---
+import Button from '../components/ui/Button.astro';
+---
 <!-- ============================================ -->
 <!--                     CTA                      -->
 <!-- ============================================ -->
@@ -10,7 +13,7 @@
                     Artistic Career</h2>
             </div>
             <div class="cs-button-box">
-                <a href="" class="cs-button-solid">Schedule Our Services</a>
+                <Button title="Schedule Our Services" link=""/>
             </div>
         </div>
     </div>
@@ -55,7 +58,7 @@
 
     #cta-1072 .cs-title {
         margin: 0;
-
+        font-weight: 900;
         color: var(--headerColor);
     }
     #cta-1072 .cs-button-box {
@@ -69,10 +72,10 @@
         /* 46px - 56px */
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
-        font-weight: 700;
+        font-weight: 400;
         text-align: center;
         margin: 0;
-        color: #ffffff;
+        color: #000;
         min-width: 9.375rem;
         padding: 0 1.5rem;
         background-color: var(--buttonColor);
@@ -89,8 +92,7 @@
         height: 100%;
         width: 0%;
         background: #000;
-        color: #fff;
-        border-radius: 20px;
+        border-radius:8px;
         opacity: 1;
         top: 0;
         left: 0;
@@ -99,6 +101,8 @@
     }
     #cta-1072 .cs-button-solid:hover:before {
         width: 100%;
+    }
+    #cta-1072 .cs-button-solid:hover{
         color: #fff;
     }
     #cta-1072 .cs-background {
