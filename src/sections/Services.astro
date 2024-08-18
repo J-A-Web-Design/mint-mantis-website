@@ -1,0 +1,256 @@
+---
+
+---
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-28">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <h2 class="cs-title">Core Services</h2>
+            </div>
+            <p class="cs-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ducimus enim dignissimos. Ea, quae debitis nam nesciunt, fugit dicta libero necessitatibus veritatis, accusamus ipsum quo!
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <!-- <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/pinwheel.svg" alt="icon" width="82" height="82"> -->
+                    <h3 class="cs-h3">Smart Publishing</h3>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a class="cs-link" href="">
+                    <!-- <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/ring.svg" alt="icon" width="82" height="82"> -->
+                    <h3 class="cs-h3">Launchpad</h3>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <!-- <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/leaf.svg" alt="icon" width="82" height="83"> -->
+                    <h3 class="cs-h3">
+                        Workshops <br>
+                        Webinars <br>
+                        Keynotes
+                    </h3>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <!-- <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/bubble-wheel.svg" alt="icon" width="82" height="82"> -->
+                    <h3 class="cs-h3">Events</h3>
+                </a>
+            </li>
+        </ul>
+        <a href="" class="cs-button-solid">See More</a>
+    </div>
+</section>
+<style>
+   /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-28 {
+        /* Centers the button */
+        text-align: center;
+        padding: var(--sectionPadding);
+    }
+    #services-28 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #services-28 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+
+    #services-28 .cs-title {
+        max-width: 18ch;
+    }
+    #services-28 .cs-text {
+        max-width: 33.75rem;
+    }
+    #services-28 .cs-card-group {
+        width: 100%;
+        /* changes to 100% at tablet */
+        max-width: 31.25rem;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #a0a3bd;
+        display: flex;
+        flex-direction: column;
+    }
+    #services-28 .cs-item {
+        width: 100%;
+        margin: auto;
+        list-style: none;
+        background-color: #fff;
+        border-bottom: 1px solid #a0a3bd;
+        transition: background-color 0.3s;
+    }
+    #services-28 .cs-item:hover {
+        background-color: var(--primary);
+    }
+    #services-28 .cs-item:hover .cs-icon {
+        /* turns it white */
+        filter: grayscale(1) brightness(1000%);
+    }
+    #services-28 .cs-item:hover .cs-h3 {
+        color: #fff;
+    }
+    #services-28 .cs-link {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        padding-top: 3.5rem;
+        padding-bottom: 3.25rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        /* Prevents padding from affecting height */
+        box-sizing: border-box;
+    }
+    #services-28 .cs-icon {
+        margin-bottom: 1.125rem;
+    }
+    #services-28 .cs-hover {
+        display: none;
+    }
+    #services-28 .cs-h3 {
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        font-weight: 400;
+        text-align: left;
+        margin: 0;
+        color: var(--headerColor);
+        transition: color 0.3s;
+    }
+    #services-28 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #services-28 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #services-28 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+}
+/* In Between - 500px */
+@media only screen and (min-width: 31.25rem) {
+    #services-28 .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #services-28 .cs-item {
+        width: 50%;
+        border-bottom: none;
+        /* Makes borders not affect widths */
+        box-sizing: border-box;
+    }
+    #services-28 .cs-item:nth-of-type(1) {
+        border-right: 1px solid #a0a3bd;
+        border-bottom: 1px solid #a0a3bd;
+    }
+    #services-28 .cs-item:nth-of-type(2) {
+        border-bottom: 1px solid #a0a3bd;
+    }
+    #services-28 .cs-item:nth-of-type(3) {
+        border-right: 1px solid #a0a3bd;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-28 .cs-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 3.75rem;
+    }
+    #services-28 .cs-title {
+        margin: 0;
+    }
+    #services-28 .cs-text {
+        text-align: right;
+    }
+    #services-28 .cs-card-group {
+        max-width: 100%;
+        border: none;
+    }
+    #services-28 .cs-item {
+        height: 13.125rem;
+        width: 25%;
+    }
+    #services-28 .cs-item:nth-of-type(1) {
+        border: none;
+        border: 1px solid #a0a3bd;
+    }
+    #services-28 .cs-item:nth-of-type(2) {
+        border: none;
+        border-top: 1px solid #a0a3bd;
+        border-bottom: 1px solid #a0a3bd;
+        border-right: 1px solid #a0a3bd;
+    }
+    #services-28 .cs-item:nth-of-type(3) {
+        border: none;
+        border-top: 1px solid #a0a3bd;
+        border-bottom: 1px solid #a0a3bd;
+    }
+    #services-28 .cs-item:nth-of-type(4) {
+        border: 1px solid #a0a3bd;
+    }
+    #services-28 .cs-link {
+        padding: 2.25rem 0;
+    }
+    #services-28 .cs-icon {
+        margin-bottom: 1.75rem;
+    }
+}
+
+                                 
+</style>                                
