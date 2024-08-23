@@ -1,0 +1,73 @@
+---
+import secondaryNavData from "../../data/secondaryNav.json";
+---
+
+<!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
+<div id="projects">
+    <section id="cta-1073">
+        <div class="cs-container">
+          <h2 class="mb-8 cs-title">
+            How Can We Help?
+          </h2>
+          <div class="card-container">
+            <div class="card">
+              <h2>
+                { secondaryNavData.secondaryNav[0].title }
+              </h2>
+              <p>
+                { secondaryNavData.secondaryNav[0].description }
+              </p>
+            </div>
+            <div class="card">
+              <h2>
+                { secondaryNavData.secondaryNav[1].title }
+              </h2>
+              <p>
+                { secondaryNavData.secondaryNav[1].description }
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+<style>
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-1073 {
+      padding: var(--sectionPadding);
+      /* background-color: var(--bgColor2); */
+      position: relative;
+      z-index: 1;
+    }
+    #cta-1073 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    .card-container{
+      display:grid;
+    }
+    .card{
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 20px 20px 40px;
+      background: #F3F5E4;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .card-container{
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+</style>

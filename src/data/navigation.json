@@ -1,29 +1,29 @@
 {
     "items": [
         {
+            "text": "Authors",
+            "href": "/authors"
+        },
+        {
+            "text": "Artists",
+            "href": "/artists"
+        },
+        {
             "text": "About",
             "href": "/about"
         },
         {
-            "text": "Services",
-            "href": "/services"
-        },
-        {
-            "text": "For Authors",
-            "href": "/for-authors",
-            "class": ""
-        },
-        {
-            "text": "For Artists",
-            "href": "/for-artists"
-        },
-        {
-            "text":"Regenerative Tourism",
-            "href":"/regenerative-tourism"
-        },
-        {
             "text": "Projects",
             "href": "/projects"
+        },
+        {
+            "text": "Enterprises",
+            "href": "/enterprises"
+        },
+        {
+            "text": "Contact",
+            "href": "/contact",
+            "class":"hidden md:block"
         }
     ]
 }

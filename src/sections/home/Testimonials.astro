@@ -1,83 +1,79 @@
----
-import InButton from "../components/ui/InButton.astro";
----
-
 <!-- ============================================ --><!--                   Reviews                    --><!-- ============================================ -->
 <section id="reviews-67">
   <div class="cs-container">
     <div class="cs-content">
-      <h2 class="cs-title capitalize">Our client's experience</h2>
-      <!-- <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p> -->
+      <h2 class="cs-title uppercase">Testimonials</h2>
     </div>
     <ul class="cs-card-group">
       <!-- Review 1 -->
       <li class="cs-item">
-        <img
-          class="cs-item-img"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://ik.imagekit.io/azupnt3mqx/Joe_Charley_Mint-Mantis.webp"
-          alt="profile picture"
-          width="150"
-          height="150"
-        />
-        <p class="cs-item-text">
-          I am thrilled to share how Mint Mantis, Inc. transformed my journey
-          from a contracted artist to a confident business owner. Their seamless
-          support and tools made the transition smooth, providing invaluable
-          guidance in navigating the business side of the entertainment
-          industry. Mint Mantis, Inc.’s unique approach of merging art and
-          commerce has given me the confidence to negotiate deals and secure
-          sponsorships. This partnership has not only elevated my business but
-          also empowered me with control and confidence. I wholeheartedly
-          recommend Mint Mantis, Inc. to any creative individual looking to take
-          charge of their business in the entertainment industry.
-        </p>
-        <div class="cs-info">
-          <div class="cs-flex-group">
-            <span class="cs-name">Jon Charley</span>
-            <span class="cs-desc">Singer, Actor,Model</span>
-            <div class="mt-8 !text-black uppercase">
-                <InButton title="About Joe" link="#" />
-              </div>
+        <div class="left">
+          <img
+            class="cs-item-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://ik.imagekit.io/azupnt3mqx/Joe_Charley_Mint-Mantis.webp"
+            alt="profile picture"
+            width="150"
+            height="150"
+          />
+          <div class="cs-info">
+            <div class="cs-flex-group">
+              <span class="cs-name">Jon Charley</span>
+              <span class="cs-desc">Singer, Actor,Model</span>
+            </div>
           </div>
+        </div>
+        <div class="right">
+          <p class="cs-item-text">
+            I am thrilled to share how Mint Mantis, Inc. transformed my journey
+            from a contracted artist to a confident business owner. Their
+            seamless support and tools made the transition smooth, providing
+            invaluable guidance in navigating the business side of the
+            entertainment industry. Mint Mantis, Inc.’s unique approach of
+            merging art and commerce has given me the confidence to negotiate
+            deals and secure sponsorships. This partnership has not only
+            elevated my business but also empowered me with control and
+            confidence. I wholeheartedly recommend Mint Mantis, Inc. to any
+            creative individual looking to take charge of their business in the
+            entertainment industry.
+          </p>
         </div>
       </li>
       <!-- Review 2 -->
       <li class="cs-item">
-        <img
-          class="cs-item-img"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://ik.imagekit.io/azupnt3mqx/Lori-Myren-Mint-Mantis-Testimonial.webp"
-          alt="profile picture"
-          width="150"
-          height="150"
-        />
-        <p class="cs-item-text">
-          About a year ago, I was introduced to Ari from Mint Mantis, whose
-          mission is to help artists move their art to the next level. Within
-          weeks of meeting each other, and with the help of Ari’s cohort, Yana,
-          we decided to add QR codes to the book, changing it from a static
-          coffee table book of tips to a living, breathing, ever-evolving book
-          on sustainable living. We also changed the name to “We Can Save the
-          World…Mars Can Wait,” a better reflection on the tone of the book and
-          the sense of community we hope to build.
-        </p>
-        <div class="cs-info">
-          <div class="cs-flex-group">
-            <span class="cs-name">Lori Myren-Manbeck</span>
-            <span class="cs-desc"
-              >P.H.D Author and Sustainability Enthusiast</span
-            >
-            <div class="mt-8 !text-black uppercase">
-              <InButton title="About Lori" link="#" />
+        <div class="left">
+          <img
+            class="cs-item-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://ik.imagekit.io/azupnt3mqx/Lori-Myren-Mint-Mantis-Testimonial.webp"
+            alt="profile picture"
+            width="150"
+            height="150"
+          />
+          <div class="cs-info">
+            <div class="cs-flex-group">
+              <span class="cs-name">Lori Myren-Manbeck</span>
+              <span class="cs-desc"
+                >P.H.D Author and Sustainability Enthusiast</span
+              >
             </div>
           </div>
+        </div>
+        <div class="right">
+          <p class="cs-item-text">
+            About a year ago, I was introduced to Ari from Mint Mantis, whose
+            mission is to help artists move their art to the next level. Within
+            weeks of meeting each other, and with the help of Ari’s cohort,
+            Yana, we decided to add QR codes to the book, changing it from a
+            static coffee table book of tips to a living, breathing,
+            ever-evolving book on sustainable living. We also changed the name
+            to “We Can Save the World…Mars Can Wait,” a better reflection on the
+            tone of the book and the sense of community we hope to build.
+          </p>
         </div>
       </li>
     </ul>
@@ -112,7 +108,9 @@ import InButton from "../components/ui/InButton.astro";
       /* centers content horizontally, set to flex-start to left align */
       align-items: flex-start;
     }
-
+    .left {
+      margin-bottom: 1.5rem;
+    }
     #reviews-67 .cs-card-group {
       padding: 0;
       margin: 0;
@@ -122,6 +120,11 @@ import InButton from "../components/ui/InButton.astro";
       row-gap: 4rem;
     }
     #reviews-67 .cs-item {
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 20px 20px 40px;
+      background: #F3F5E4;
+
       text-align: left;
       list-style: none;
       width: 100%;
@@ -129,17 +132,12 @@ import InButton from "../components/ui/InButton.astro";
       /* pushes up the same amount the cs-item-img overlaps the card */
       margin: 2.5rem 0 0 0;
       /* Padding L & R - 16px - 32px */
-      padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
+      /* padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0; */
       /* 32px - 40px */
       padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
       box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
-      border-radius: 0.25rem;
-      background: #fff;
       position: relative;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
+      display: grid;
       /* Prevents padding from affecting height & width */
       box-sizing: border-box;
     }
@@ -149,9 +147,9 @@ import InButton from "../components/ui/InButton.astro";
     #reviews-67 .cs-item-img {
       width: 8rem;
       height: 8rem;
-      position: absolute;
-      top: -5.5rem;
-      border-radius: 8px;
+      /* position: absolute;
+      top: -5.5rem; */
+      border-radius: 99px;
     }
     #reviews-67 .cs-item-text {
       font-size: 1rem;
@@ -177,15 +175,15 @@ import InButton from "../components/ui/InButton.astro";
       font-size: 1rem;
       line-height: 1.5em;
       font-weight: 700;
-      width: 40%;
+      width: 80%;
       margin: 0;
       display: block;
       color: var(--headerColor);
     }
     #reviews-67 .cs-desc {
       font-size: 0.875rem;
-      font-weight: 400;
-      color: #7d799c;
+      font-weight: 700;
+      color: var(--primary);
       display: block;
     }
 
@@ -225,11 +223,13 @@ import InButton from "../components/ui/InButton.astro";
       width: 100%;
     }
   }
-  /* Tablet - 768px */
-  @media only screen and (min-width: 48rem) {
+  @media only screen and (min-width: 60rem) {
     #reviews-67 .cs-card-group {
       flex-direction: row;
       justify-content: space-between;
+    }
+    #reviews-67 .cs-item {
+    grid-template-columns: 1fr 2fr;
     }
     #reviews-67 .cs-title {
       max-width: 50rem;

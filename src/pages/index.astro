@@ -1,22 +1,36 @@
 ---
 import Banner from "../sections/Banner.astro";
-import Hero from "../sections/Hero.astro";
+import Hero from "../sections/home/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-import Logos from "../sections/Logos.astro";
-import Projects from "../sections/Projects.astro";
-import Services from "../sections/Services.astro";
+import Line from "../components/ui/Line.astro";
+import Logos from "../sections/home/Logos.astro";
+import SecondaryNav from "../sections/home/SecondaryNav.astro";
+import Services from "../sections/home/Services.astro";
 import WeDo from "../sections/WeDo.astro";
 import WeOffer from "../sections/WeOffer.astro";
-import Testimonials from "../sections/Testimonials.astro";
+import Testimonials from "../sections/home/Testimonials.astro";
+import Updates from "../sections/home/Updates.astro";
 ---
 
 <Layout>
   <Hero title="Mint Mantis" subtitle="[Description Here]" link="" linkText="Learn More"/>
+  <Updates />
+  <div class="cs-container">
+    <Line />
+  </div>
+  <SecondaryNav />
+  <div class="cs-container">
+    <Line />
+  </div>
   <Services />
-  <Banner />
-  <Projects />
-  <WeDo />
-  <WeOffer />
-  <Logos/>
+  <div class="cs-container">
+    <Line />
+  </div>
+  <!-- <WeDo />
+  <WeOffer /> -->
   <Testimonials />
+  <div class="cs-container">
+    <Line />
+  </div>
+  <Logos/>
 </Layout>

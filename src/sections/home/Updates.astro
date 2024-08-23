@@ -1,0 +1,67 @@
+---
+import Button from "../../components/ui/Button.astro";
+import Line from "../../components/ui/Line.astro";
+import UpdateData from "../../data/updates.json";
+---
+
+<section class="cs-container">
+  <h2 class="cs-title">Latest Updates</h2>
+  <div class="grid-container">
+    <div class="left mb-8">
+      <img src="https://placehold.co/400x500" alt="" class="rounded-xl" />
+    </div>
+    <div class="right mb-8">
+      <div class="update-card mb-8 lg:mb-0">
+        <div class="card-text">
+          <h3>{UpdateData.updates[0].title}</h3>
+          <p class="primary">
+            {UpdateData.updates[0].date}
+          </p>
+          <p>{UpdateData.updates[0].description}</p>
+        </div>
+        <div>
+          <Button title="Register" link="" />
+        </div>
+      </div>
+     <div class="mb-8">
+      <Line />
+     </div>
+      <div class="update-card">
+        <div class="card-text">
+          <h3>{UpdateData.updates[1].title}</h3>
+          <p class="primary">
+            {UpdateData.updates[1].date}
+          </p>
+          <p>{UpdateData.updates[1].description}</p>
+        </div>
+        <div>
+          <Button title="Register" link="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <Button title="See More" link="" />
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .cs-title{
+      margin-bottom: 5rem;
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .grid-container {
+      grid-template-columns: 1fr 2fr;
+      gap: 7.5rem;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>

@@ -1,0 +1,14 @@
+{
+  "secondaryNav": [
+    {
+      "title": "For Authors",
+      "description": "Solutions that brings your book to life",
+      "link": "https://www.google.com"
+    },
+    {
+        "title": "For Artists",
+        "description": "Turn your visions into reality",
+        "link": "https://www.google.com"
+      }
+  ]
+}

@@ -1,13 +1,13 @@
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #b0c929;
+  --primary: #95AA26;
   --primaryLight: #c2db30;
   --secondary: #24251c;
   --secondaryLight: #484a38;
   --headerColor: #1a1a1a;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #fafbfc;
-  --bgColor: #f3f5e4;
+  --bgColor: #fbfbfb;
   --bgColor2: #26271F;
   --bgColor3: #c6c8b7;
   --buttonColor: #B0C929;
@@ -15,10 +15,10 @@
   /* 13px - 16px */
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
   /* 31px - 49px */
-  --headerFontSize: clamp(1.9375rem, 3.9vw, 4.25rem);
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 2rem);
   --bodyFontSize: 1rem;
   /* 60px - 100px top and bottom */
-  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  --sectionPadding: clamp(3.75rem, 7.82vw, 5.25rem) 1rem;
 
 }
 body {
@@ -40,6 +40,10 @@ body {
   /* prevents padding from affecting height and width */
   box-sizing: border-box;
 }
+.cs-container{
+  max-width: 80rem;
+  margin: 0 auto;
+}
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
@@ -54,13 +58,14 @@ body {
 
 .cs-title {
   font-size: var(--headerFontSize);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2em;
   text-align: inherit;
   max-width: 43.75rem;
   margin: 0 0 1rem 0;
   color: var(--headerColor);
   position: relative;
+  text-transform: uppercase;
 }
 
 .cs-text {
@@ -83,21 +88,7 @@ h6 {
   color: rgb(var(--black));
   line-height: 1.2;
 }
-h1 {
-  font-size: 3.052em;
-}
-h2 {
-  font-size: 2.441em;
-}
-h3 {
-  font-size: 1.5rem;
-}
-h4 {
-  font-size: 1.563em;
-}
-h5 {
-  font-size: 1.25em;
-}
+
 strong,
 b {
   font-weight: 700;
@@ -108,8 +99,14 @@ a {
 a:hover {
   color: var(--accent);
 }
+section{
+  padding: var(--sectionPadding);
+}
 p {
   margin-bottom: 1em;
+}
+.primary{
+  color: var(--primary);
 }
 .prose p {
   margin-bottom: 2em;
@@ -214,3 +211,35 @@ hr {
 }
 
   
+
+@media only screen and (min-width: 0rem) {
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+  /* h3 {
+    font-size: 1.5rem;
+  } */
+  h4 {
+    font-size: 1.563em;
+  }
+  h5 {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 48rem){
+  h1 {
+    font-size: 3.052em;
+  }
+  h2, h3 {
+    font-size: 2rem;
+  }
+  /* h3 {
+    font-size: 1.5rem;
+  } */
+  h4 {
+    font-size: 1.563em;
+  }
+  h5 {
+    font-size: 1.25em;
+  } 
+}
