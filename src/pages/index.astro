@@ -1,5 +1,8 @@
 ---
 import Banner from "../sections/Banner.astro";
+import BookCall from "../sections/BookCall.astro";
+import CTA from "../sections/CTA.astro";  
+import ContactFormAlt from "../sections/ContactFormAlt.astro";
 import Hero from "../sections/home/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import Line from "../components/ui/Line.astro";
@@ -23,9 +26,7 @@ import Updates from "../sections/home/Updates.astro";
     <Line />
   </div>
   <Services />
-  <div class="cs-container">
-    <Line />
-  </div>
+  <CTA/>
   <!-- <WeDo />
   <WeOffer /> -->
   <Testimonials />
@@ -33,4 +34,9 @@ import Updates from "../sections/home/Updates.astro";
     <Line />
   </div>
   <Logos/>
+  <div class="cs-container">
+    <Line />
+  </div>
+  <BookCall />
+  <ContactFormAlt />
 </Layout>

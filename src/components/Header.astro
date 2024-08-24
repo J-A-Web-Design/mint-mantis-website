@@ -3,52 +3,134 @@ import navigationData from "../data/navigation.json";
 
 const { items } = navigationData;
 ---
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
 
+<!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
 <header id="cs-navigation">
-    <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="back to home">
-           <h1 class="text-xl sm:text-2xl text-white font-bold">
-            Mint Mantis
-           </h1>
-        </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                </div>
-            </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    {
-                        items.map((item) => (
-                          <li class="cs-li">
-                            <a href={item.href} class={`cs-li-link ${item.class ?? ""}`}>
-                              {item.text}
-                            </a>
-                          </li>
-                        ))
-                      }
-                </ul>
-            </div>
-        </nav>
-        <a href="/contact" class="cs-button-solid cs-nav-button">Contact</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
-        </button> -->
-    </div>
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <a href="/" class="cs-logo" aria-label="back to home">
+      <h1 class="text-3xl text-white">Mint Mantis</h1>
+    </a>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+              Authors
+              <img
+                class="cs-drop-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-green.svg"
+                alt="dropdown icon"
+                width="15"
+                height="15"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Housing</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Food Banks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+              Artists
+              <img
+                class="cs-drop-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-green.svg"
+                alt="dropdown icon"
+                width="15"
+                height="15"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Housing</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Food Banks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> About</a>
+          </li>
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+             Projects
+              <img
+                class="cs-drop-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-green.svg"
+                alt="dropdown icon"
+                width="15"
+                height="15"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Housing</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Food Banks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+              Enterprises
+              <img
+                class="cs-drop-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-green.svg"
+                alt="dropdown icon"
+                width="15"
+                height="15"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Housing</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Food Banks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="cs-li block md:hidden">
+            <a href="" class="cs-li-link"> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <a href="/" class="cs-button-solid cs-nav-button">Contact Us</a>
+    <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+    <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+          <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+          <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+      </button> -->
+  </div>
 </header>
-                                
+
 <script>
   // add classes for mobile navigation toggling
   var CSbody = document.querySelector("body");
@@ -81,10 +163,13 @@ const { items } = navigationData;
 
   document.addEventListener("scroll", (e) => {
     const scroll = document.documentElement.scrollTop;
+    const navbar = document.querySelector("#cs-navigation");
     if (scroll >= 100) {
       document.querySelector("body").classList.add("scroll");
+      navbar?.classList.add("cs-dark-bg");
     } else {
       document.querySelector("body").classList.remove("scroll");
+      navbar?.classList.remove("cs-dark-bg");
     }
   });
 
@@ -111,31 +196,34 @@ const { items } = navigationData;
        padding: 0;
   }
 
-  #cs-navigation h1{
-      font-family: 'Inria Sans', sans-serif;
-    }
+  #cs-navigation.cs-dark-bg {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with slight transparency */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
   /* Mobile - 1023px */
   @media only screen and (max-width: 63.9375rem) {
     body.cs-open {
       overflow: hidden;
     }
-    body.cs-open #cs-navigation:after {
-      width: 100%;
-      opacity: 1;
+    body.scroll #cs-navigation .cs-top-container {
+      gap: 0;
     }
-    body.scroll #cs-navigation:after {
-      width: 100%;
+    body.scroll #cs-navigation .cs-top-social {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      visibility: hidden;
     }
     #cs-navigation {
       width: 100%;
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
-      border-bottom: 1px solid #484848;
+      background-color: #ffffff00;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
     }
     #cs-navigation:before {
-      /* mobile nav overlay on open */
       content: "";
       width: 100%;
       height: 0vh;
@@ -150,20 +238,6 @@ const { items } = navigationData;
       opacity: 0;
       transition: height 0.5s, opacity 0.5s;
     }
-    #cs-navigation:after {
-      /* on scroll overlay */
-      content: "";
-      width: 0%;
-      height: 100%;
-      background: #1a1a1a;
-      opacity: 0.8;
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: width 0.3s, opacity 0.3s;
-    }
     #cs-navigation.cs-active:before {
       height: 150vh;
       opacity: 1;
@@ -177,18 +251,43 @@ const { items } = navigationData;
       transform: translateY(0);
       opacity: 1;
     }
+
+    #cs-navigation .cs-link-icon {
+      width: 1rem;
+      height: auto;
+      display: block;
+    }
+    #cs-navigation .cs-social-link {
+      text-decoration: none;
+      width: 2rem;
+      height: 2rem;
+      background-color: #f7f7f7;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #cs-navigation .cs-social-icon {
+      width: 0.75rem;
+      height: auto;
+      opacity: 0.6;
+      display: block;
+    }
     #cs-navigation .cs-container {
       width: 100%;
-      padding: 1rem;
+      /* 16px - 20px */
+      padding: clamp(1rem, 2.5vw, 1.25rem) 1rem;
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      position: relative;
     }
     #cs-navigation .cs-logo {
-      width: 9.1875rem;
-      height: auto;
+      width: auto;
+      /* 32px - 48px */
+      height: clamp(2rem, 6.4vw, 3rem);
       margin: 0 auto 0 0;
       padding: 0;
       /* prevents padding and border from affecting height and width */
@@ -196,23 +295,33 @@ const { items } = navigationData;
       display: flex;
       justify-content: center;
       align-items: center;
+      order: 1;
       z-index: 10;
     }
     #cs-navigation .cs-logo img {
-      width: 100%;
+      width: auto;
       height: 100%;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
     }
+    #cs-navigation .cs-nav {
+      order: 2;
+    }
     #cs-navigation .cs-toggle {
-      width: 3.5rem;
-      height: 3.5rem;
+      /* 48px - 56px */
+      width: clamp(3rem, 7.2vw, 3.5rem);
+      height: clamp(3rem, 7.2vw, 3.5rem);
       margin: 0 0 0 auto;
-      background-color: #48484800;
+      background-color: var(--primary);
+      border-radius: 0.25rem;
       border: none;
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: transform 0.6s;
+    }
+    #cs-navigation .cs-toggle.cs-active {
+      transform: rotate(180deg);
     }
     #cs-navigation .cs-active .cs-line1 {
       top: 50%;
@@ -269,7 +378,7 @@ const { items } = navigationData;
       height: auto;
       padding-bottom: 3rem;
       opacity: 0;
-      background-color: #1a1a1a;
+      background-color: #fff;
       box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
       overflow: hidden;
       position: absolute;
@@ -348,7 +457,7 @@ const { items } = navigationData;
       line-height: 1.2em;
       text-decoration: none;
       margin: 0;
-      color: var(--bodyTextColorWhite);
+      color: var(--headerColor);
       display: inline-block;
       position: relative;
     }
@@ -361,6 +470,216 @@ const { items } = navigationData;
     #cs-navigation .cs-button-solid {
       display: none;
     }
+    #cs-navigation .cs-donate {
+      text-decoration: none;
+      margin-right: 2rem;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      order: 1;
+    }
+    #cs-navigation .cs-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #cs-navigation .cs-donate-icon {
+      width: 3.5rem;
+      height: auto;
+    }
+    #cs-navigation .cs-desc {
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+    #cs-navigation .cs-header {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    
+  }
+
+  /*-- -------------------------- -->
+<---     Navigation Dropdown    -->
+<--- -------------------------- -*/
+
+  /* Mobile - 1023px */
+  @media only screen and (max-width: 63.9375rem) {
+    #cs-navigation .cs-li {
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+    #cs-navigation .cs-dropdown {
+      position: relative;
+      color: var(--bodyTextColorWhite);
+    }
+    #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      margin: 0.75rem 0 0 0;
+      padding: 0.75rem 0;
+    }
+    #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
+      opacity: 1;
+    }
+    #cs-navigation .cs-dropdown .cs-li-link {
+      position: relative;
+      transition: opacity 0.3s;
+    }
+    #cs-navigation .cs-drop-icon {
+      width: 0.9375rem;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      right: -1.25rem;
+      transform: translateY(-50%);
+    }
+    #cs-navigation .cs-drop-ul {
+      width: 100%;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary);
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s,
+        visibility 0.3s;
+    }
+    #cs-navigation .cs-drop-li {
+      list-style: none;
+    }
+    #cs-navigation .cs-li-link.cs-drop-link {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 2vw, 1.25rem);
+      color: #fff;
+    }
+  }
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #cs-navigation .cs-dropdown {
+      position: relative;
+    }
+    #cs-navigation .cs-dropdown:hover {
+      cursor: pointer;
+    }
+    #cs-navigation .cs-dropdown:hover .cs-drop-ul {
+      transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    #cs-navigation .cs-dropdown:hover .cs-drop-li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #cs-navigation .cs-drop-icon {
+      width: 0.9375rem;
+      height: auto;
+      display: inline-block;
+    }
+    #cs-navigation .cs-drop-ul {
+      min-width: 12.5rem;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
+      border-bottom: 5px solid var(--primary);
+      /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
+      position: absolute;
+      top: 100%;
+      z-index: -100;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+    }
+    #cs-navigation .cs-drop-li {
+      list-style: none;
+      font-size: 1rem;
+      text-decoration: none;
+      opacity: 0;
+      width: 100%;
+      height: auto;
+      display: block;
+      transform: translateY(-0.625rem);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(1) {
+      transition-delay: 0.05s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(2) {
+      transition-delay: 0.1s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(3) {
+      transition-delay: 0.15s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(4) {
+      transition-delay: 0.2s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(5) {
+      transition-delay: 0.25s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(6) {
+      transition-delay: 0.3s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(7) {
+      transition-delay: 0.35s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(8) {
+      transition-delay: 0.4s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(9) {
+      transition-delay: 0.45s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(10) {
+      transition-delay: 0.5s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(11) {
+      transition-delay: 0.55s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(12) {
+      transition-delay: 0.6s;
+    }
+    #cs-navigation .cs-drop-li:nth-of-type(13) {
+      transition-delay: 0.65s;
+    }
+    #cs-navigation .cs-li-link.cs-drop-link {
+      font-size: 1rem;
+      white-space: nowrap;
+      line-height: 1.5em;
+      text-decoration: none;
+      width: 100%;
+      padding: 0.75rem;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      color: var(--bodyTextColor);
+      display: block;
+      transition: color 0.3s, background-color 0.3s;
+    }
+    #cs-navigation .cs-li-link.cs-drop-link:hover {
+      color: var(--primary);
+      background-color: #f7f7f7;
+    }
+    #cs-navigation .cs-li-link.cs-drop-link:before {
+      display: none;
+    }
   }
 
   /*-- -------------------------- -->
@@ -369,36 +688,101 @@ const { items } = navigationData;
 
   /* Small Desktop - 1024px */
   @media only screen and (min-width: 64rem) {
-    body.scroll #cs-navigation:after {
-      height: 100%;
-    }
     #cs-navigation {
       width: 100%;
       padding: 0;
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
-      border: 1px solid #484848;
+      background-color: #ffffff00;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
     }
-    #cs-navigation:after {
-      /* on scroll overlay */
-      content: "";
+    #cs-navigation .cs-top-bar {
       width: 100%;
-      height: 0%;
-      background: #1a1a1a;
-      opacity: 0.8;
-      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #cs-navigation .cs-top-container {
+      width: 100%;
+      max-width: 107.5rem;
+      padding: 1rem;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3.125rem;
+    }
+    #cs-navigation .cs-top-contact {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    #cs-navigation .cs-top-link {
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      text-decoration: none;
+      margin: 0;
+      color: var(--bodyTextColor);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+    }
+    #cs-navigation .cs-top-link:hover {
+      text-decoration: underline;
+    }
+    #cs-navigation .cs-top-link:last-of-type:after {
+      display: none;
+    }
+    #cs-navigation .cs-top-link:after {
+      content: "";
+      width: 1px;
+      height: 1.5rem;
+      /* 8px - 16px */
+      margin-left: clamp(0.5rem, 1.5vw, 1rem);
+      background: #bababa;
+      opacity: 1;
+      position: relative;
       display: block;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: height 0.3s, opacity 0.3s;
+    }
+    #cs-navigation .cs-link-icon {
+      width: 1rem;
+      height: auto;
+      display: block;
+    }
+    #cs-navigation .cs-top-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    #cs-navigation .cs-social-link {
+      text-decoration: none;
+      width: 2rem;
+      height: 2rem;
+      background-color: #f7f7f7;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    #cs-navigation .cs-social-link:hover {
+      background-color: var(--secondary);
+    }
+    #cs-navigation .cs-social-icon {
+      width: 0.75rem;
+      height: auto;
+      opacity: 0.6;
+      display: block;
     }
     #cs-navigation .cs-container {
       width: 100%;
-      /* same height as the cs-ul-wrapper */
-      height: 5.8125rem;
       max-width: 80rem;
       margin: auto;
       padding: 0 1rem;
@@ -431,13 +815,6 @@ const { items } = navigationData;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
     }
-    #cs-navigation .cs-ul-wrapper {
-      /* absolutely positioned to be dead center */
-      /* position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); */
-    }
     #cs-navigation .cs-ul {
       width: 100%;
       margin: 0;
@@ -445,8 +822,7 @@ const { items } = navigationData;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      /* 20px - 36px */
-      gap: clamp(1.25rem, 2.6vw, 2.25rem);
+      gap: 2.5rem;
     }
     #cs-navigation .cs-li {
       list-style: none;
@@ -456,7 +832,7 @@ const { items } = navigationData;
     }
     #cs-navigation .cs-li-link {
       /* 14px - 16px */
-      font-size: clamp(0.875rem, 0.6vw, 1rem);
+      font-size: clamp(0.875rem, 1.3vw, 1rem);
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
@@ -465,29 +841,45 @@ const { items } = navigationData;
       position: relative;
       transition: color 0.3s;
     }
-    #cs-navigation .cs-li-link:before {
-      content: "";
-      width: 0%;
-      height: 1px;
-      background: currentColor;
-      opacity: 1;
-      position: absolute;
-      display: block;
-      bottom: -2px;
-      left: 0;
-      transition: width 0.3s;
-    }
     #cs-navigation .cs-li-link:hover {
-      color: var(--primaryLight);
-    }
-    #cs-navigation .cs-li-link:hover:before {
-      width: 100%;
-    }
-    #cs-navigation .cs-li-link.cs-active {
       color: var(--primary);
     }
-    #cs-navigation .cs-li-link.cs-active:before {
-      width: 100%;
+    #cs-navigation .cs-li-link.cs-active {
+      font-weight: 700;
+      color: var(--headerColor);
+    }
+    #cs-navigation .cs-donate {
+      text-decoration: none;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    #cs-navigation .cs-donate:hover .cs-donate-icon {
+      transform: scale(1.1);
+    }
+    #cs-navigation .cs-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #cs-navigation .cs-donate-icon {
+      width: 3.5rem;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    #cs-navigation .cs-desc {
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+    #cs-navigation .cs-header {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
     }
     #cs-navigation .cs-button-solid {
       font-size: 1rem;
@@ -501,6 +893,8 @@ const { items } = navigationData;
       min-width: 9.375rem;
       padding: 0 2rem;
       background-color: var(--primary);
+      border-radius: 0.5rem;
+      overflow: hidden;
       display: inline-block;
       position: relative;
       z-index: 1;
@@ -513,26 +907,40 @@ const { items } = navigationData;
       position: absolute;
       height: 100%;
       width: 0%;
-      background: #fff;
+      background: #1a1a1a;
+      border-radius: 0.5rem;
       opacity: 1;
       top: 0;
       left: 0;
       z-index: -1;
       transition: width 0.3s;
     }
-    #cs-navigation .cs-button-solid:hover {
-      color: #1a1a1a;
-    }
     #cs-navigation .cs-button-solid:hover:before {
       width: 100%;
     }
     #cs-navigation .cs-nav-button {
-      line-height: 2.875rem;
-    }
-
-    #cs-navigation .cs-li:last-of-type{
+      padding: 0 3rem;
       display: none;
     }
   }
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #cs-navigation .cs-container {
+      justify-content: space-between;
+    }
+    #cs-navigation .cs-nav-button {
+      margin-left: auto;
+      display: block;
+    }
+  }
+  /* Larger Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #cs-navigation .cs-donate {
+      display: flex;
+      margin-left: auto;
+    }
+    #cs-navigation .cs-nav-button {
+      margin: 0;
+    }
+  }
 </style>
-

@@ -2,7 +2,17 @@
     "items": [
         {
             "text": "Authors",
-            "href": "/authors"
+            "href": "/authors",
+            "links": [
+                {
+                  "text": "Web Development",
+                  "href": "/"
+                },
+                {
+                    "text": "Copyrighting",
+                    "href": "/"
+                  }
+              ]
         },
         {
             "text": "Artists",
