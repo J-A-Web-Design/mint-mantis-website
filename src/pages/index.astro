@@ -1,18 +1,17 @@
 ---
-import Banner from "../sections/Banner.astro";
-import BookCall from "../sections/BookCall.astro";
-import CTA from "../sections/CTA.astro";  
-import ContactFormAlt from "../sections/ContactFormAlt.astro";
-import Hero from "../sections/home/Hero.astro";
+import Banner from "../components/sections/Banner.astro";
+import BookCall from "../components/sections/BookCall.astro";
+import CTA from "../components/sections/CTA.astro";  
+import ContactFormAlt from "../components/sections/ContactFormAlt.astro";
+import Hero from "../components/sections/home/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import Line from "../components/ui/Line.astro";
-import Logos from "../sections/home/Logos.astro";
-import SecondaryNav from "../sections/home/SecondaryNav.astro";
-import Services from "../sections/home/Services.astro";
-import WeDo from "../sections/WeDo.astro";
-import WeOffer from "../sections/WeOffer.astro";
-import Testimonials from "../sections/home/Testimonials.astro";
-import Updates from "../sections/home/Updates.astro";
+import Logos from "../components/sections/home/Logos.astro";
+import SmartPub from "../components/sections/home/SmartPub.astro";
+import SecondaryNav from "../components/sections/home/SecondaryNav.astro";
+import Services from "../components/sections/home/Services.astro";
+import Testimonials from "../components/sections/home/Testimonials.astro";
+import Updates from "../components/sections/home/Updates.astro";
 ---
 
 <Layout>
@@ -27,8 +26,10 @@ import Updates from "../sections/home/Updates.astro";
   </div>
   <Services />
   <CTA/>
-  <!-- <WeDo />
-  <WeOffer /> -->
+  <SmartPub />
+  <div class="cs-container">
+    <Line />
+  </div>
   <Testimonials />
   <div class="cs-container">
     <Line />
@@ -38,5 +39,8 @@ import Updates from "../sections/home/Updates.astro";
     <Line />
   </div>
   <BookCall />
+  <div class="cs-container">
+    <Line />
+  </div>
   <ContactFormAlt />
 </Layout>

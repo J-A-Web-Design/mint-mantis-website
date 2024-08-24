@@ -1,0 +1,48 @@
+---
+import Button from "../../ui/Button.astro";
+import InButton from "../../ui/InButton.astro";
+import UpdateData from "../../../data/updates.json";
+---
+
+<section class="cs-container">
+  <div class="grid-container">
+    <div class="left mb-8">
+      <img src="https://placehold.co/400x400" alt="" class="rounded-xl" />
+    </div>
+    <div class="right mb-8">
+      <div class="update-card mb-8 lg:mb-0">
+        <div class="card-text">
+          <h2 class="cs-title">Smart Publishing Guide for Authors</h2>
+          <p>{UpdateData.updates[0].description}</p>
+          <div class="flex gap-4">
+            <Button title="Buy for $25" link="" />
+            <InButton title="Learn More" link="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .cs-title {
+      margin-bottom: 1.25rem;
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .grid-container {
+      grid-template-columns: 1fr 2fr;
+      gap: 7.5rem;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
