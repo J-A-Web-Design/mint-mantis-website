@@ -21,15 +21,21 @@
                 Email
                 <input class="cs-input" required type="text" id="email-307" name="email" placeholder="Email">
             </label>
-            <label class="cs-label cs-phone">
+            <!-- <label class="cs-label cs-phone">
                 Phone
                 <input class="cs-input" required type="text" id="phone-307" name="phone" placeholder="Phone">
-            </label>
+            </label> -->
             <label class="cs-label">
                 Message
                 <textarea class="cs-input cs-textarea" required name="Message" id="message-307" placeholder="Write message..."></textarea>
             </label>
+            <div class="flex items-center pb-8">
+              <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I accept the Terms of Service and Privacy Policy.</label>
+          </div>
+          <div class="flex flex-row items-end justify-end">
             <button class="cs-button-solid cs-submit" type="submit">Submit</button>
+          </div>
         </form>
     </div>
    
@@ -128,7 +134,7 @@
     background: rgb(253, 252, 252);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.324);
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
   }
@@ -232,7 +238,7 @@
 @media only screen and (min-width: 64rem) {
   #contact-307 .cs-email,
   #contact-307 .cs-phone {
-    width: 48%;
+    width: 100%;
   }
 }
 /* Desktop - 1300px - Parallax Effect */
