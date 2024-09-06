@@ -10,7 +10,7 @@ const { title, link } = Astro.props;
       font-size: 1rem;
       /* 46px - 56px */
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 600;
       text-align: center;
       margin: 0;
       min-width: 9.375rem;
@@ -26,19 +26,7 @@ const { title, link } = Astro.props;
       border-radius: 8px;
       padding: 16px 032px 016px 032px;
     }
-    .cs-button-transparent:before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 0%;
-      background: var(--buttonColor);
-      opacity: 1;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: width 0.3s;
-      border-radius: 8px;
-    }
+
     .cs-button-transparent:after {
       /* border */
       content: "";
@@ -58,6 +46,10 @@ const { title, link } = Astro.props;
     }
     .cs-button-transparent:hover {
       color: var(--headerColor);
+      background: #E4EAC4;
+    }
+    .cs-button-transparent:active{
+      
     }
     .cs-button-transparent:hover:before {
       width: 100%;

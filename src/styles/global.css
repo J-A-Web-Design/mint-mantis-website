@@ -5,8 +5,8 @@
   --secondary: #24251c;
   --secondaryLight: #484a38;
   --headerColor: #1a1a1a;
-  --bodyTextColor: #4e4b66;
-  --bodyTextColorWhite: #fafbfc;
+  --bodyTextColor: #26271F;
+  --bodyTextColorWhite: #F3F5E4;
   --bgColor: #fdffed;
   --bgColor2: #26271F;
   --bgColor3: #c6c8b7;
@@ -177,7 +177,7 @@ hr {
   /* 46px - 56px */
   line-height: clamp(2.875rem, 5.5vw, 3.5rem);
   text-decoration: none;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   text-align: center;
   margin: 0;
   color: #000 !important;
