@@ -180,7 +180,7 @@ hr {
   font-weight: 600 !important;
   text-align: center;
   margin: 0;
-  color: #000 !important;
+  color: var(--bodyTextColor);
   min-width: 9.375rem;
   padding: 0 1.5rem;
   background-color: var(--buttonColor);
@@ -193,7 +193,7 @@ hr {
 }
 
  .cs-button-solid:hover{
-  color: #fff;
+  color: var(--bodyTextColorWhite);
   background-color: #C9DF4D !important;
 }
 
