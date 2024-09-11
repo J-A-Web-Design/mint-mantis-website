@@ -5,7 +5,6 @@
 <section id="contact-307">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
             <h2 class="cs-title">Get In Touch</h2>
             <p class="cs-text">
                 Please fill up this form for any inquiry or questions. 
@@ -30,8 +29,8 @@
                 <textarea class="cs-input cs-textarea" required name="Message" id="message-307" placeholder="Write message..."></textarea>
             </label>
             <div class="flex items-center pb-8">
-              <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-              <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I accept the Terms of Service and Privacy Policy.</label>
+              <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-100 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checked-checkbox" class="ms-2 text-sm font-medium custom-black">I accept the Terms of Service and Privacy Policy.</label>
           </div>
           <div class="flex flex-row items-end justify-end">
             <button class="cs-button-solid cs-submit" type="submit">Submit</button>
@@ -46,6 +45,9 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  .custom-black{
+    color: #26271F;
+  }
   #contact-307 {
     padding: var(--sectionPadding);
     position: relative;
@@ -57,7 +59,7 @@
     max-width: 34.375em;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     gap: 2.5rem;
@@ -215,12 +217,12 @@
   #contact-307 .cs-container {
     max-width: 80rem;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 4.75rem;
   }
   #contact-307 .cs-content {
     width: 50%;
-    max-width: 29.0625rem;
+    max-width: 34.0625rem;
     flex: none;
   }
   #contact-307 .cs-form {
@@ -229,7 +231,7 @@
   }
   #contact-307 .cs-submit {
     max-width: 10.125rem;
-    margin-left: 20px;
+    margin-left: auto;
     margin-right: auto;
     display: block;
   }

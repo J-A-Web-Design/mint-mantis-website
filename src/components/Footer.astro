@@ -11,7 +11,7 @@ const today = new Date();
       <div class="cs-logo-group">
           <a aria-label="go back to home" class="cs-logo" href="">
             <img src="https://ik.imagekit.io/azupnt3mqx/Mint-Mantis-logo.webp?updatedAt=1723254923859" alt="Mint Mantis Logo" class="w-3/4 mx-auto">
-            <h2 class="text-white text-center font-semibold">Mint Mantis</h2>
+            <h2 class="custom-white text-center font-semibold">Mint Mantis</h2>
           </a>
 
       </div>
@@ -69,12 +69,21 @@ const today = new Date();
       </li>
     </ul>
 
-  </div>
-  <div class="pt-8">
-    <p class="text-center text-slate-50">
-        Developed by <a href="http://" target="_blank">
-        J.A Web Design</a>
-    </p>
+    <div class="pt-8">
+     <div class="sm:flex gap-16">
+        <p class="text-left custom-white">
+            Copyright © 2024 Mint Mantis. All Rights Reserved
+        </p>
+        <p class="sm:text-center custom-white">
+         Designed & Developed by <a href="#">Mint Mantis</a>
+      </p>
+     </div>
+    <div class="flex gap-4">
+        <a href="" class="block custom-white">Privacy</a>
+        <a href="" class="block text-center custom-white">Legal</a>
+    </div>
+      
+    </div>
   </div>
 </footer>
                               
@@ -85,6 +94,9 @@ const today = new Date();
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+    .custom-white{
+        color:#F3F5E4
+    }
     #cs-footer-269 {
         /* 60px - 100px top and bottom */
         padding: clamp(3.75rem, 3.82vw, 6.25rem) 1rem;

@@ -18,7 +18,7 @@
   --headerFontSize: clamp(1.9375rem, 3.9vw, 2rem);
   --bodyFontSize: 1rem;
   /* 60px - 100px top and bottom */
-  --sectionPadding: clamp(3.75rem, 7.82vw, 5.25rem) 1rem;
+  --sectionPadding: clamp(1.75rem, 7.82vw, 2.25rem) 2rem;
 
 }
 body {
@@ -30,7 +30,7 @@ body {
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
+  color: rgb(var(--bodyTextColor));
   line-height: 1.7;
 }
 *,
@@ -194,7 +194,7 @@ hr {
 
  .cs-button-solid:hover{
   color: #fff;
-  background-color: var(--primaryLight) !important;
+  background-color: #C9DF4D !important;
 }
 
   
