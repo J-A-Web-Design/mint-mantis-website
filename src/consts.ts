@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Mint Mantis';
-export const SITE_DESCRIPTION = '';
+export const SITE_DESCRIPTION = 'Mint Mantis empowers artists with the resources, skills, and guidance to turn their art into a thriving business.';
