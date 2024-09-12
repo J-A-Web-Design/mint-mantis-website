@@ -8,10 +8,10 @@ const {title, subtitle, link, linkText } = Astro.props;
 <div id="banner-310">
   <div class="cs-container">
     <span class="cs-int-title">{title}</span>
-    <div class="cs-breadcrumbs">
+    <!-- <div class="cs-breadcrumbs">
       <a href="/" class="cs-link">Home</a>
-      <a href="" class="cs-link cs-active">{title}</a>
-    </div>
+      <a href={link} class="cs-link cs-active">{title}</a>
+    </div> -->
   </div>
   <!--Background Image-->
   <picture class="cs-background">
@@ -61,7 +61,7 @@ const {title, subtitle, link, linkText } = Astro.props;
     #banner-310 .cs-int-title {
       /* 39px - 49px */
       font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
-      font-weight: 900;
+      font-weight: 700;
       line-height: 1.2em;
       text-align: center;
       max-width: 43.75rem;
