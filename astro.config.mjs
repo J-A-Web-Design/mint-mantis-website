@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 import playformCompress from '@playform/compress';
 
-// https://astro.build/config
+
 export default defineConfig({
   site: 'https://mintmantis.ca/',
   integrations: [
