@@ -2,74 +2,89 @@
 <section id="cs-contact-490">
   <div class="cs-container">
     <!-- Contact Info -->
-    <div class="cs-content">
-      <span class="cs-topper">Contact Us</span>
-      <h2 class="cs-title">Contact Information</h2>
+    <div class="contact-header sm:flex">
+      <h2 class="cs-title">Contact Us</h2>
       <p class="cs-text">
         We carefully review requests for representation and will reach out if
         we’re interested in setting up a meeting. If you have any specific
         questions, don’t hesitate to contact us via email
       </p>
-
+    </div>
+   <div class="flex-container">
+    <div class="cs-content pb-4">
       <!--Address-->
-      <span class="cs-header">Reach Directly</span>
-      <p class="text-base">Arsham (Ari) Saeidi-Pour</p>
-      <a href="mailto:Ari@mintmantis.com" class="cs-link">Ari@mintmantis.com</a>
-      <!--Email-->
-      <!-- <span class="cs-header">Artists</span>
+      <div class="contact-info">
+        <span class="cs-header">Reach Directly</span>
+        <p class="text-base">Arsham (Ari) Saeidi-Pour</p>
+        <a href="mailto:Ari@mintmantis.com" class="cs-link"
+          >Ari@mintmantis.com</a
+        >
+        <!--Email-->
+        <!-- <span class="cs-header">Artists</span>
       <a href="mailtp:apply@mintmantis.com" class="cs-link"
         >apply@mintmantis.com</a
       > -->
-      <!--General inquiries-->
-      <span class="cs-header"
-        >General Inquiries, Partnerships & Sponsorships
-      </span>
-      <a href="mailto:info@mintmantis.com" class="cs-link"
-        >info@mintmantis.com</a
-      >
+        <!--General inquiries-->
+        <span class="cs-header"
+          >General Inquiries, Partnerships & Sponsorships
+        </span>
+        <a href="mailto:info@mintmantis.com" class="cs-link"
+          >info@mintmantis.com</a
+        >
 
-      <!--Social Buttons-->
-      <div class="cs-social">
-        <a class="cs-social-link" aria-label="visit google profile" href="">
-          <img
-            class="cs-social-img"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg"
-            alt="google"
-            width="11"
-            height="11"
-          />
-        </a>
-        <a class="cs-social-link" aria-label="visit facebook profile" href="">
-          <img
-            class="cs-social-img"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg"
-            alt="facebook"
-            width="6"
-            height="11"
-          />
-        </a>
-        <a class="cs-social-link" aria-label="visit instagram profile" href="">
-          <img
-            class="cs-social-img"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg"
-            alt="instagram"
-            width="11"
-            height="11"
-          />
-        </a>
+        <!--Social Buttons-->
+        <div class="cs-social">
+          <a class="cs-social-link" aria-label="visit google profile" href="">
+            <img
+              class="cs-social-img"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg"
+              alt="google"
+              width="11"
+              height="11"
+            />
+          </a>
+          <a class="cs-social-link" aria-label="visit facebook profile" href="">
+            <img
+              class="cs-social-img"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg"
+              alt="facebook"
+              width="6"
+              height="11"
+            />
+          </a>
+          <a
+            class="cs-social-link"
+            aria-label="visit instagram profile"
+            href=""
+          >
+            <img
+              class="cs-social-img"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg"
+              alt="instagram"
+              width="11"
+              height="11"
+            />
+          </a>
+        </div>
       </div>
     </div>
     <!-- Form -->
-    <form id="cs-form-490" name="Contact Form" method="POST" data-netlify="true" netlify>
+    <form
+      id="cs-form-490"
+      name="Contact Form"
+      method="POST"
+      data-netlify="true"
+      netlify
+    >
       <label class="cs-label">
         Name
         <input
@@ -119,10 +134,12 @@
           required
           name="Message"
           id="message-490"
-          placeholder="Write a short description about yourself, your talent type, and experience"></textarea>
+          placeholder="Write a short description about yourself, your talent type, and experience"
+        ></textarea>
       </label>
       <button class="cs-button-solid" type="submit">Submit Message Now</button>
     </form>
+   </div>
   </div>
 </section>
 <style>
@@ -138,17 +155,9 @@
     #cs-contact-490 .cs-container {
       width: 100%;
       /* changes to 1280px at desktop */
-      max-width: 34.375rem;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 3rem;
-    }
-    #cs-contact-490 .cs-content {
-      max-width: 32.625rem;
-      text-align: left;
+      max-width: 80rem;
+      margin: 0 auto;
+      /* display: flex; */
     }
     #cs-contact-490 .cs-text {
       /* 16px - 48px */
@@ -315,6 +324,15 @@
       max-width: 80rem;
       flex-direction: row;
       justify-content: space-between;
+    }
+    #cs-contact-490 .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      max-width: 80rem;
+      text-align: left;
     }
     #cs-contact-490 .cs-content {
       width: 40%;

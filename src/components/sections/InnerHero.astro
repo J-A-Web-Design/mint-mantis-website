@@ -7,7 +7,10 @@ const {title, subtitle, link, linkText } = Astro.props;
 <!-- ============================================ -->
 <div id="banner-310">
   <div class="cs-container">
-    <span class="cs-int-title">{title}</span>
+    <h2 class="cs-int-title">{title}</h2>
+    <p class="cs-text">
+      {subtitle}
+    </p>
     <!-- <div class="cs-breadcrumbs">
       <a href="/" class="cs-link">Home</a>
       <a href={link} class="cs-link cs-active">{title}</a>
@@ -59,7 +62,8 @@ const {title, subtitle, link, linkText } = Astro.props;
     }
     #banner-310 .cs-int-title {
       /* 39px - 49px */
-      font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+      font-family: 'Inria Sans', sans-serif;
+      font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
       font-weight: 700;
       line-height: 1.2em;
       text-align: center;
@@ -67,6 +71,13 @@ const {title, subtitle, link, linkText } = Astro.props;
       margin: 0 auto 0.75rem;
       color: var(--bodyTextColorWhite);
       position: relative;
+    }
+    #banner-310 .cs-text{
+      color: var(--bodyTextColorWhite);
+      font-size: 1rem;
+      text-align: center;
+      max-width: 30rem;
+      padding: 0 1rem;
     }
     #banner-310 .cs-breadcrumbs {
       display: flex;
@@ -134,6 +145,14 @@ const {title, subtitle, link, linkText } = Astro.props;
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+
+    @media screen and (min-width: 800px) {
+      #banner-310 .cs-text{
+      max-width: 49rem;
+      font-size: 1.5rem;
+    }
+      
     }
   }
 </style>
