@@ -1,0 +1,28 @@
+---
+import BookCall from "../components/sections/BookCall.astro";
+import ContactFormAlt from "../components/sections/ContactFormAlt.astro";
+
+import InnerHero from "../components/sections/InnerHero.astro";
+import Line from "../components/ui/Line.astro";
+import Layout from "../layouts/Layout.astro";
+
+import SubmitCTA from "../components/sections/SubmitCTA.astro";
+import SmartPub from "../components/sections/home/SmartPub.astro";
+---
+
+<Layout>
+  <InnerHero
+    title="Publish Smart, Not Fast"
+    subtitle="Build a strong foundation for your book's success before it even hits the shelves"
+  />
+  <SubmitCTA/>
+  <SmartPub/>
+  <div class="cs-container">
+    <Line />
+  </div>
+  <BookCall/>
+  <div class="cs-container">
+    <Line />
+  </div>
+  <ContactFormAlt />
+</Layout>
