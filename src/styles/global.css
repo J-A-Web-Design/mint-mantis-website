@@ -193,7 +193,7 @@ hr {
 }
 
  .cs-button-solid:hover{
-  color: var(--bodyTextColorWhite);
+  color: var(--bodyTextColor);
   background-color: #C9DF4D !important;
 }
 
