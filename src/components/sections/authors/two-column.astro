@@ -1,0 +1,92 @@
+---
+import Button from "../../ui/Button.astro";
+import Line from "../../ui/Line.astro";
+import QuickData from "../../../data/quick-fixes.json";
+---
+
+<section class="cs-container">
+  <div class="sm:flex flex-row sm:py-20">
+    <div class="column">
+      <h2 class="cs-title">Tired of Quick Fixes?</h2>
+      <p class="text-2xl sm:max-w-2xl">
+        Discover how to make your words work harder for you
+      </p>
+
+      <!-- <a href="http://" class="font-semibold">See more</a> -->
+    </div>
+    <div class="grid-container">
+      <div class="left mb-8">
+        <!-- <img src="https://placehold.co/400x500" alt="" class="rounded-xl" /> -->
+      </div>
+      <div class="right mb-8">
+        <div class="update-card mb-8 lg:mb-0">
+          <div class="card-text flex flex-row gap-4">
+            <img
+              src="/pen.svg"
+              alt="Mint Mantis - Pen Icon"
+              class="w-8 h-fit"
+            />
+            <p>{QuickData.points[0].description}</p>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="card-text flex flex-row gap-4">
+            <img
+              src="/pen.svg"
+              alt="Mint Mantis - Pen Icon"
+              class="w-8 h-fit"
+            />
+            <p>{QuickData.points[1].description}</p>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="card-text flex flex-row gap-4">
+            <img
+              src="/pen.svg"
+              alt="Mint Mantis - Pen Icon"
+              class="w-8 h-fit"
+            />
+            <p>{QuickData.points[2].description}</p>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="card-text flex flex-row gap-4">
+            <img
+              src="/pen.svg"
+              alt="Mint Mantis - Pen Icon"
+              class="w-8 h-fit"
+            />
+            <p>{QuickData.points[3].description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .cs-title {
+      max-width: 30rem;
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .cs-title {
+      font-size: 2rem;
+    }
+    .grid-container {
+      grid-template-columns: 1fr 2fr;
+      gap: 7.5rem;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>

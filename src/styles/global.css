@@ -57,7 +57,7 @@ body {
 
 .cs-title {
   font-size: var(--headerFontSize);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2em;
   text-align: inherit;
   max-width: 43.75rem;
