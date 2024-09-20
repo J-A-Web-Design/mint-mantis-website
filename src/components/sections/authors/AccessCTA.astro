@@ -1,0 +1,154 @@
+<!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
+<section id="cta-301">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Interested in learning more about smart publishing?</h2>
+      <p class="cs-text">
+        Request the link to our “Intro to Smart Publishing” webinar
+      </p>
+      <form class="cs-form" name="Contact Form" method="post">
+        <input
+          class="cs-input"
+          type="email"
+          id="cs-email-301"
+          name="find-us"
+          placeholder="johndoe@example.com"
+        />
+        <button class="cs-button-solid cs-submit" type="submit"
+          >Access Now</button
+        >
+      </form>
+    </div>
+  </div>
+</section>
+<style>
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-301 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+    }
+    #cta-301 .cs-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: 34.375rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #cta-301 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      max-width: 39.375rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+    #cta-301 .cs-title {
+      max-width: 30ch;
+    }
+    #cta-301 .cs-title,
+    #cta-301 .cs-text {
+      color: var(--bodyTextColor);
+    }
+    #cta-301 .cs-text {
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+    #cta-301 .cs-text:last-of-type {
+      margin-bottom: 2rem;
+    }
+    #cta-301 .cs-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    #cta-301 .cs-input {
+      font-size: 1rem;
+      width: 100%;
+      height: clamp(2.875rem, 5.5vw, 3.5rem);
+      margin: 0;
+      padding: 0;
+      padding-left: 1.25rem;
+      border: none;
+      border-radius: 0.25rem;
+      /* prevents padding from adding to width and height */
+      box-sizing: border-box;
+      display: block;
+    }
+    #cta-301 .cs-input::placeholder {
+      color: #767676;
+    }
+    #cta-301 .cs-button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      background-color: var(--primaryLight);
+      border-radius: 0.25rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+    }
+   
+    #cta-301 .cs-submit {
+      width: 100%;
+      border: none;
+      color: var(--headerColor);
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cta-301 .cs-container {
+      max-width: 80rem;
+      align-items: flex-start;
+    }
+    #cta-301 .cs-content {
+      width: 70%;
+      text-align: left;
+      align-items: flex-start;
+    }
+    #cta-301 .cs-form {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    #cta-301 .cs-input {
+      width: 22.5rem;
+      border: 1px solid rgba(0,0,0,0.324);
+    }
+    #cta-301 .cs-submit {
+      width: 13.875rem;
+    }
+
+  }
+  /* Large Desktop 1300px - Parallax Scroll */
+  @media only screen and (min-width: 81.25rem) {
+    #cta-301 {
+    }
+    #cta-301 .cs-background img {
+
+    }
+  }
+</style>
+
