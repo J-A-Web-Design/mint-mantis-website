@@ -10,12 +10,17 @@ import playformCompress from '@playform/compress';
 
 
 
+import icon from 'astro-icon';
+
+
+
 export default defineConfig({
   site: 'https://mintmantis.ca/',
   integrations: [
     mdx(),
     sitemap(),
     tailwind(),
-    playformCompress()
+    playformCompress(),
+    icon()
   ]
 });

@@ -1,0 +1,95 @@
+---
+import QuickData from "../../../data/benefits-authors.json";
+---
+
+<section class="cs-container">
+  <div class="sm:flex flex-row sm:py-20">
+    <div class="column">
+      <h2 class="cs-title">
+        Build a Strong Author Platform
+      </h2>
+      <p class="text-2xl sm:max-w-2xl">
+        Establish your presence with a compelling online identity that connects with readers and publishers.
+      </p>
+
+      <!-- <a href="http://" class="font-semibold">See more</a> -->
+    </div>
+    <div class="grid-container">
+      <div class="left mb-8">
+        <!-- <img src="https://placehold.co/400x500" alt="" class="rounded-xl" /> -->
+      </div>
+      <div class="right mb-8">
+        <div class="update-card mb-8 lg:mb-0">
+          <div class="card-text flex flex-row gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 21v-5.313m0 0c5.818-4.55 10.182 4.55 16 0V4.313c-5.818 4.55-10.182-4.55-16 0z" />
+            </svg>
+          <div>
+            <h3 class="text-2xl font-semibold">
+              {QuickData.points[0].heading}
+            </h3>
+            <p>{QuickData.points[0].description}</p>
+          </div>
+          </div>
+        </div>
+        <div class="update-card mb-8 lg:mb-0">
+          <div class="card-text flex flex-row gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19c0-2.21-2.686-4-6-4s-6 1.79-6 4M16.828 5.172a4 4 0 0 1 0 5.657M19 3a7.07 7.07 0 0 1 0 10M9 12a4 4 0 1 1 0-8a4 4 0 0 1 0 8" />
+            </svg>
+            <div>
+              <h3 class="text-2xl font-semibold">
+                {QuickData.points[1].heading}
+              </h3>
+              <p>{QuickData.points[1].description}</p>
+            </div>
+          </div>
+        </div>
+        <div class="update-card mb-8 lg:mb-0">
+          <div class="card-text flex flex-row gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.121 15.879a3 3 0 1 0-4.243 4.243a3 3 0 0 0 4.243-4.243m0 0L15.88 8.12m0 0a3 3 0 1 0 4.243-4.243A3 3 0 0 0 15.88 8.12m0 0l.004-.004" />
+            </svg>
+            <div>
+              <h3 class="text-2xl font-semibold">
+                {QuickData.points[2].heading}
+              </h3>
+              <p>{QuickData.points[2].description}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .card-text svg{
+      color: var(--primary);;
+    }
+    .cs-title {
+      max-width: 30rem;
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .cs-title {
+      font-size: 2rem;
+    }
+    .grid-container {
+      grid-template-columns: 1fr 2fr;
+      gap: 7.5rem;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>
