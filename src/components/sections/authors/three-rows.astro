@@ -1,0 +1,90 @@
+---
+import Button from "../../ui/Button.astro";
+import Line from "../../ui/Line.astro";
+import UpdateData from "../../../data/updates.json";
+---
+
+<section class="cs-container">
+<div class="flex flex-col gap-1">
+  <h2 class="cs-title">
+    Tailored solutions for your needs
+  </h2>
+  <p class="text-2xl">
+    Our tailored services not only guide authors through publishing but also help them build a sustainable business around their book, setting them apart in the market and maximizing long-term success.
+  </p>
+</div>
+  <div class="flex-container">
+    <div class="right mb-8">
+      <div class="update-card mb-8 lg:mb-0">
+        <div class="card-text">
+          <h3>
+            Launchpad
+          </h3>
+          <p>
+            Launchpad is a tailored program that equips authors with the tools and strategies needed for a successful crowdfunding campaign. It focuses on refining book concepts, crafting compelling pitches, and developing engaging rewards to attract and secure fans.
+          </p>
+        </div>
+        <div>
+          <Button title="Register" link="" />
+        </div>
+      </div>
+     <div class="mb-8">
+      <Line />
+     </div>
+      <div class="update-card">
+        <div class="card-text">
+          <h3>
+            Smart Publishing Foundations
+          </h3>
+          <p>
+            Six-week course that provide authors with essential skills and strategies to successfully launch their books on the Publishizer platform and effectively reach their target audience.
+          </p>
+        </div>
+        <div>
+          <Button title="Register" link="" />
+        </div>
+      </div>
+      <div class="mb-8">
+        <Line />
+       </div>
+      <div class="update-card">
+        <div class="card-text">
+          <h3>
+            Agency Support Services
+          </h3>
+          <p>
+            We support authors by marketing and distributing their books, building business models around their work, expanding their audience, and connecting them with sponsors, partners, and opportunities for lasting success.
+          </p>
+        </div>
+        <div>
+          <Button title="Register" link="" />
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .cs-title{
+      /* margin-bottom: 5rem; */
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>
