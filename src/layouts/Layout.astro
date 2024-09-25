@@ -1,4 +1,5 @@
 ---
+import { AstroSeo } from '@astrolib/seo';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -9,12 +10,15 @@ import '@fontsource-variable/montserrat';
 import '@fontsource/inria-sans';
 import "../styles/global.css";
 
+const title = "Mint Mantis | Creative Agency, Artist Management, Smart Publishing";
+const description = "Mint Mantis empowers artists with the resources, skills, and guidance to turn their art into a thriving business.";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<!-- <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /> -->
+		 <AstroSeo title={title} description={description} />
 	</head>
 	<body>
 		<Header />

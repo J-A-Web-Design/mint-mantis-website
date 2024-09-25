@@ -1,5 +1,5 @@
 ---
-
+import { AstroSeo } from '@astrolib/seo';
 import InnerHero from "../components/sections/InnerHero.astro";
 import Line from "../components/ui/Line.astro";
 import Layout from "../layouts/Layout.astro";
@@ -17,6 +17,7 @@ import ThreeRows from "../components/sections/authors/three-rows.astro";
 import WhyUs from "../components/sections/authors/WhyUs.astro";
 ---
 
+<AstroSeo title="For Authors | Mint Mantis" description="" />
 <Layout>
   <InnerHero
     title="Publish Smart, Not Fast"
@@ -33,6 +34,9 @@ import WhyUs from "../components/sections/authors/WhyUs.astro";
   <TwoColumnAlt/>
   <SubmitCTA/>
   <SmartPub/>
+  <div class="cs-container">
+    <Line />
+  </div>
   <ThreeRows/>
   <div class="cs-container">
     <Line />

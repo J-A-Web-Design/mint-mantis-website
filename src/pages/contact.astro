@@ -1,10 +1,12 @@
 ---
+import { AstroSeo } from '@astrolib/seo';
 import ContactForm from '../components/sections/ContactForm.astro';
 import InnerHero from '../components/sections/InnerHero.astro';
 import Layout from "../layouts/Layout.astro";
 
 ---
 
+<AstroSeo title="Contact | Mint Mantis" description="" />
 <Layout>
   <InnerHero title="Contact" subtitle="Build a strong foundation for your book's success before it even hits the shelves"/>
   <ContactForm/>
