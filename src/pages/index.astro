@@ -1,4 +1,6 @@
 ---
+import { AstroSeo } from '@astrolib/seo';
+
 import Banner from "../components/sections/Banner.astro";
 import BookCall from "../components/sections/BookCall.astro";
 import CTA from "../components/sections/CTA.astro";  
@@ -15,6 +17,8 @@ import Updates from "../components/sections/home/Updates.astro";
 import Projects from "../components/sections/home/Projects.astro";
 import SubmitCTA from "../components/sections/SubmitCTA.astro";
 ---
+
+<AstroSeo title="Mint Mantis | Creative Agency, Artist Management, Smart Publishing" description="Mint Mantis empowers artists with the resources, skills, and guidance to turn their art into a thriving business." />
 
 <Layout>
   <Hero/>
