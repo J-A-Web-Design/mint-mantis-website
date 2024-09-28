@@ -1,62 +1,76 @@
 ---
-import Button from "../../ui/Button.astro";
 import Line from "../../ui/Line.astro";
-import QuickData from "../../../data/quick-fixes.json";
+import tourismSolutions from "../../../data/tourism-solutions.json";
 ---
 
 <section class="cs-container">
   <div class="sm:flex flex-row sm:py-20">
     <div class="column">
-      <h2 class="cs-title">Tired of Quick Fixes?</h2>
-      <p class="text-2xl sm:max-w-2xl">
-        Discover how to make your words work harder for you
+      <h2 class="cs-title">
+        Regenerative Tourism Solutions
+      </h2>
+      <p class="text-base sm:max-w-2xl">
+        Creating Intimate, Profitable Guest Experiences through Regenerative Practices
       </p>
-
-      <!-- <a href="http://" class="font-semibold">See more</a> -->
     </div>
     <div class="grid-container">
       <div class="left mb-8">
-        <!-- <img src="https://placehold.co/400x500" alt="" class="rounded-xl" /> -->
       </div>
       <div class="right mb-8">
+        <p class="mb-8">
+          We support hotels through regenerative tourism practices that enhance guest experiences and boost operational efficiency.
+        </p>
         <div class="update-card mb-8 lg:mb-0">
           <div class="card-text flex flex-row gap-4">
-            <img
-              src="/pen.svg"
-              alt="Mint Mantis - Pen Icon"
-              class="w-8 h-fit"
-            />
-            <p>{QuickData.points[0].description}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 1024 1024">
+              <path fill="#95AA26" d="M640 384v64H448a128 128 0 0 0-128 128v128a128 128 0 0 0 128 128h320a128 128 0 0 0 128-128V576a128 128 0 0 0-64-110.848V394.88c74.56 26.368 128 97.472 128 181.056v128a192 192 0 0 1-192 192H448a192 192 0 0 1-192-192V576a192 192 0 0 1 192-192z" />
+              <path fill="#95AA26" d="M384 640v-64h192a128 128 0 0 0 128-128V320a128 128 0 0 0-128-128H256a128 128 0 0 0-128 128v128a128 128 0 0 0 64 110.848v70.272A192.06 192.06 0 0 1 64 448V320a192 192 0 0 1 192-192h320a192 192 0 0 1 192 192v128a192 192 0 0 1-192 192z" />
+            </svg>
+           <div>
+            <h3 class="text-2xl font-semibold">
+              Intimate Guest Experiences
+            </h3>
+            <p>{tourismSolutions.points[0].description}</p>
+           </div>
           </div>
         </div>
         <div class="update-card">
           <div class="card-text flex flex-row gap-4">
-            <img
-              src="/pen.svg"
-              alt="Mint Mantis - Pen Icon"
-              class="w-8 h-fit"
-            />
-            <p>{QuickData.points[1].description}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+              <path fill="#95AA26" d="M12 21q-.213 0-.357-.143T11.5 20.5V4.864L6.677 9.68q-.14.14-.332.134q-.191-.007-.337-.153q-.14-.14-.14-.345t.14-.344l5.427-5.427q.13-.13.267-.184T12 3.31t.298.053t.268.184l5.446 5.446q.14.14.14.342q0 .2-.14.347q-.146.165-.357.155q-.21-.009-.357-.155L12.5 4.883V20.5q0 .214-.143.357T12 21" />
+            </svg>
+          <div>
+            <h3 class="text-2xl font-semibold">
+              Revenue Growth
+            </h3>
+            <p>{tourismSolutions.points[1].description}</p>
+          </div>
           </div>
         </div>
         <div class="update-card">
           <div class="card-text flex flex-row gap-4">
-            <img
-              src="/pen.svg"
-              alt="Mint Mantis - Pen Icon"
-              class="w-8 h-fit"
-            />
-            <p>{QuickData.points[2].description}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+              <path fill="#95AA26" d="M11.5 6.5h3v-3h-3zm-7 8h3v-3h-3zm12 6h3v-3h-3zm-1-.039v-1.269L8.116 15.5H4.539q-.441 0-.74-.299t-.299-.74V11.54q0-.441.299-.74t.74-.299H7.53l2.97-3.409V3.54q0-.441.299-.74t.74-.299h2.923q.44 0 .739.299t.299.74v2.923q0 .44-.299.739t-.74.299H11.47L8.5 10.908v3.65l7.029 3.511v-.692q.046-.383.328-.63q.281-.247.681-.247h2.923q.441 0 .74.299t.299.74v2.922q0 .441-.299.74t-.74.299H16.54q-.441 0-.74-.299t-.299-.74" />
+            </svg>
+           <div>
+            <h3 class="text-2xl font-semibold">
+              Market Differentiation
+            </h3>
+            <p>{tourismSolutions.points[2].description}</p>
+           </div>
           </div>
         </div>
         <div class="update-card">
           <div class="card-text flex flex-row gap-4">
-            <img
-              src="/pen.svg"
-              alt="Mint Mantis - Pen Icon"
-              class="w-8 h-fit"
-            />
-            <p>{QuickData.points[3].description}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
+              <path fill="#95AA26" d="M6.327 20.539q-1.2 0-2.033-.833t-.832-2.033t.832-2.033t2.033-.832t2.033.832t.832 2.033q0 .503-.172.972t-.497.841v-.29q.808.402 1.685.603T12 20q3.21 0 5.495-2.164q2.286-2.163 2.488-5.311q.011-.213.16-.37t.36-.155t.354.156t.131.369q-.207 3.57-2.792 6.022T12 21q-1.065 0-2.084-.238t-1.98-.731q-.361.263-.773.385t-.836.122m.001-1q.778 0 1.321-.544t.543-1.322t-.544-1.321t-1.322-.543t-1.321.544q-.544.545-.544 1.322t.545 1.321t1.322.544M12 14.865q-1.2 0-2.033-.832T9.135 12t.832-2.033T12 9.135t2.033.832t.833 2.033t-.833 2.033t-2.033.833M12 4Q8.79 4 6.505 6.164q-2.286 2.163-2.488 5.311q-.011.214-.16.37t-.36.155t-.354-.156t-.131-.369q.207-3.57 2.792-6.022T12 3q1.066 0 2.084.238t1.98.731q.37-.244.774-.366t.835-.122q1.2 0 2.023.823t.823 2.023t-.823 2.033t-2.023.832t-2.033-.832t-.832-2.033q0-.503.172-.972t.497-.842v.29q-.808-.401-1.685-.602Q12.916 4 12 4m5.673 4.192q.77 0 1.308-.552q.538-.553.538-1.313t-.538-1.303t-1.308-.543q-.76 0-1.312.54q-.553.54-.553 1.313t.544 1.315t1.321.543m0-1.865" />
+            </svg>
+           <div>
+            <h3 class="text-2xl font-semibold">
+              Community Impact
+            </h3>
+            <p>{tourismSolutions.points[3].description}</p>
+           </div>
           </div>
         </div>
       </div>
@@ -78,7 +92,7 @@ import QuickData from "../../../data/quick-fixes.json";
       font-size: 2rem;
     }
     .grid-container {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 3fr;
       gap: 7.5rem;
     }
     .update-card {

@@ -1,0 +1,106 @@
+---
+import Line from "../../ui/Line.astro";
+---
+
+<section class="cs-container">
+<div class="flex flex-col gap-1">
+  <h2 class="cs-title">
+   Who we work with
+  </h2>
+  <p class="text-2xl">
+    Supporting authors, artists, and enterprises in creative project execution and building valuable networks.
+  </p>
+</div>
+  <div class="flex-container">
+    <div class="right mb-8">
+      <div class="update-card mb-8 lg:mb-0">
+        <div class="card-text">
+          <h3>
+            Authors
+          </h3>
+          <p class="max-w-screen-md">
+            We help authors position their work, connect with audiences and sponsors, and build sustainable careers.
+          </p>
+        </div>
+        <div class="flex flex-row justify-end items-end">
+          <img src="/right.png" alt="Mint Mantis - Right Arrow" height="20" width="40" class="m-2">
+        </div>
+      </div>
+      
+     <div class="mb-8 line">
+      <Line />
+     </div>
+      <div class="update-card">
+        <div class="card-text">
+          <h3>
+           Artists
+          </h3>
+          <p class="max-w-screen-md">
+            We support artists in bringing their creative visions to market, growing their reach, and monetizing their work.
+          </p>
+        </div>
+        <div class="flex flex-row justify-end items-end">
+          <img src="/right.png" alt="Mint Mantis - Right Arrow" height="20" width="40" class="m-2">
+        </div>
+      </div>
+      <div class="mb-8 line">
+        <Line />
+       </div>
+      <div class="update-card">
+        <div class="card-text">
+          <h3>
+            Enterprises
+          </h3>
+          <p class="max-w-screen-md">
+            We assist enterprises in integrating creativity into their business strategies and building partnerships with artists and authors.
+          </p>
+        </div>
+        <div class="flex flex-row justify-end items-end">
+          <img src="/right.png" alt="Mint Mantis - Right Arrow" height="20" width="40" class="m-2">
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .cs-title{
+      /* margin-bottom: 5rem; */
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      min-width: 100%;
+    }
+    .card-text, .line {
+      margin-left: 40px;
+
+    }
+    .card-text h3{
+     min-width: 350px;
+     font-size: 1.5rem;
+     font-weight: 600;
+    }
+    .card-text{
+      max-width: 1536px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* gap: 80px; */
+    }
+  }
+</style>
