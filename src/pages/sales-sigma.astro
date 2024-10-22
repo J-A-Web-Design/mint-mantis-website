@@ -1,0 +1,31 @@
+---
+import { AstroSeo } from '@astrolib/seo';
+import InnerHero from '../components/sections/InnerHero.astro';
+import Layout from "../layouts/Layout.astro";
+import Line from "../components/ui/Line.astro";
+
+import SalesCTA from "../components/sections/sales-sigma/SalesCTA.astro";
+import SalesPrinciples from "../components/sections/sales-sigma/SalesPrinciples.astro";
+import ContactFormAlt from "../components/sections/ContactFormAlt.astro";
+import TwoColumnAlt from "../components/sections/sales-sigma/two-column-alt.astro";
+import BookCall from '../components/sections/BookCall.astro';
+import TwoColumn from '../components/sections/sales-sigma/two-column.astro';
+
+---
+<AstroSeo title="Sales Sigma Program | Mint Mantis" description="Mint Mantis helps authors build a strong foundation for publishing success with expert support in crowdfunding, marketing, and platform building." />
+
+<Layout>
+	<InnerHero title="Sales Sigma Program" subtitle="Position for Peak Performance. Master the Art of Stress-free Selling" link=""/>
+	<TwoColumnAlt/>
+	<SalesCTA/>
+	<TwoColumn/>
+	<SalesPrinciples/>
+	<div class="cs-container">
+		<Line />
+	  </div>
+	<BookCall/>
+	<div class="cs-container">
+		<Line />
+	  </div>
+	<ContactFormAlt/>
+</Layout>
