@@ -28,6 +28,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
     <AstroSeo title={title} description={description} />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCVN372QY7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RCVN372QY7');
+    </script>
   </head>
   <body>
     <Header />
