@@ -1,0 +1,32 @@
+---
+import { AstroSeo } from '@astrolib/seo';
+import InnerHero from '../components/sections/InnerHero.astro';
+import Layout from "../layouts/Layout.astro";
+import Line from "../components/ui/Line.astro";
+
+import GreenStepsCTA from "../components/sections/green-steps/GreenStepsCTA.astro";
+import ContactFormAlt from "../components/sections/ContactFormAlt.astro";
+import TwoColumnAlt from "../components/sections/green-steps/two-column-alt.astro";
+import BookCall from '../components/sections/BookCall.astro';
+import TwoColumn from '../components/sections/green-steps/two-column.astro';
+import TwoColumnImg from '../components/sections/green-steps/two-column-img.astro';
+
+---
+<AstroSeo title="Green Steps Program | Mint Mantis" description="Mint Mantis helps authors build a strong foundation for publishing success with expert support in crowdfunding, marketing, and platform building." />
+
+<Layout>
+	<InnerHero title="Green Steps Program" subtitle="Leading hotels into the future with regenerative tourism" link=""/>
+	<TwoColumnAlt/>
+	<GreenStepsCTA/>
+	<TwoColumn/>
+	<div class="cs-container">
+		<Line />
+	  </div>
+
+	 <!-- <TwoColumnImg/>  -->
+	<BookCall/>
+	<div class="cs-container">
+		<Line />
+	  </div>
+	<ContactFormAlt/>
+</Layout>

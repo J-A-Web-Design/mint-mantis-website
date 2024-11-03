@@ -1,0 +1,91 @@
+---
+import QuickData from "../../../data/quick-fixes.json";
+---
+
+<section class="cs-container">
+  <div class="sm:flex flex-row sm:py-20">
+    <div class="column">
+      <h2 class="cs-title">
+        Ready to re-invent Your Hotel?
+      </h2>
+    </div>
+    <div class="grid-container">
+      <div class="left mb-8">
+      </div>
+      <div class="right mb-8">
+        <div class="update-card mb-8 lg:mb-0">
+          <div class="card-text flex flex-row gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+              <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.805 3.555l15.81 4.865c.862.265.96 1.446.153 1.85l-6.7 3.35a1 1 0 0 0-.448.447l-3.35 6.7c-.403.807-1.584.71-1.85-.153L3.555 4.804a1 1 0 0 1 1.25-1.249" />
+            </svg>
+           <div>
+            <h3 class="text-2xl font-semibold">
+              Revenue and Loyalty
+            </h3>
+            <p>
+              Lead with regenerative practices that attract eco-conscious guests, increase loyalty, and drive revenue while supporting the planet
+            </p>
+           </div>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="card-text flex flex-row gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+              <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.805 3.555l15.81 4.865c.862.265.96 1.446.153 1.85l-6.7 3.35a1 1 0 0 0-.448.447l-3.35 6.7c-.403.807-1.584.71-1.85-.153L3.555 4.804a1 1 0 0 1 1.25-1.249" />
+            </svg>
+          <div>
+            <h3 class="text-2xl font-semibold">
+              Stronger Local Ties
+            </h3>
+            <p>
+              The hotel contributes to and benefits from deeper connections with the local community
+            </p>
+          </div>
+          </div>
+        </div>
+        <div class="update-card">
+          <div class="card-text flex flex-row gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
+              <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.805 3.555l15.81 4.865c.862.265.96 1.446.153 1.85l-6.7 3.35a1 1 0 0 0-.448.447l-3.35 6.7c-.403.807-1.584.71-1.85-.153L3.555 4.804a1 1 0 0 1 1.25-1.249" />
+            </svg>
+           <div>
+            <h3 class="text-2xl font-semibold">
+              Guest Experience
+            </h3>
+            <p>
+              Guests enjoy a more meaningful stay through engaging, eco-friendly and community-focused initiatives
+            </p>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .cs-title {
+      max-width: 80rem;
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .cs-title {
+      font-size: 2rem;
+    }
+    .grid-container {
+      grid-template-columns: 1fr 3fr;
+      gap: 7.5rem;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>

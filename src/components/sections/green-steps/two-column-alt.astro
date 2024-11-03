@@ -1,0 +1,54 @@
+---
+import QuickData from "../../../data/benefits-about.json";
+---
+
+<section class="cs-container">
+  <div class="sm:py-20">
+    <div class="column sm:flex flex-row justify-between">
+      <h2 class="cs-title">
+        What is regenerative tourism?
+      </h2>
+      <div>
+        <p class="text-2xl sm:max-w-2xl font-semibold">
+          It is more important than you might imagine
+        </p>
+        <p class="text-2xl sm:max-w-2xl">
+          Regenerative tourism goes beyond sustainability, actively revitalizing local communities, environments, and cultures. Mint Mantis helps hotels implement these forward-thinking practices, transforming operations and guest experiences through initiatives like Green Steps. By integrating art, literature, and regenerative practices, hotels can strengthen community ties, enhance biodiversity, and offer guests unique, meaningful stays—all while increasing long-term value for both their business and the planet.
+        </p>
+      </div>
+      
+
+      <!-- <a href="http://" class="font-semibold">See more</a> -->
+    </div>
+  </div>
+</section>
+
+<style>
+  @media only screen and (min-width: 0rem) {
+    .card-text svg{
+      color: var(--primary);;
+    }
+    .cs-title {
+      max-width: 30rem;
+    }
+    .grid-container {
+      display: grid;
+    }
+  }
+  @media only screen and (min-width: 48rem) {
+    .cs-title {
+      font-size: 2rem;
+    }
+    .grid-container {
+      grid-template-columns: 1fr 2fr;
+      gap: 7.5rem;
+    }
+    .update-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>
