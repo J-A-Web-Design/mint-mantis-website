@@ -1,0 +1,91 @@
+
+
+<!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
+<div id="projects">
+    <section id="cta-1073">
+        <div class="cs-container">
+          <h2 class="mb-8 cs-title">
+            how it is different from sustainability
+          </h2>
+          <div class="card-container">
+            <div class="card !p-8">
+              <h2 class="text-2xl font-semibold">
+                Sustainability
+              </h2>
+              <ul>
+                <li class="list-disc">
+                  Reduces harm and minimizes environmental impact
+                </li>
+                <li class="list-disc">
+                  Conserves resources
+                </li>
+                <li class="list-disc">
+                  Maintains practices that prevent depletion of resources
+                </li>
+              </ul>
+            </div>
+            <div class="card !p-8">
+              <h2 class="text-2xl font-semibold">
+                Regenerative
+              </h2>
+              <ul>
+                <li class="list-disc">
+                  Actively restores and improves ecosystems
+                </li>
+                <li class="list-disc">
+                  Grows biodiversity
+                </li>
+                <li class="list-disc">
+                  Revitalizes communities and economies
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+<style>
+  /*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-1073 {
+      padding: var(--sectionPadding);
+      /* background-color: var(--bgColor2); */
+      position: relative;
+      z-index: 1;
+    }
+    #cta-1073 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    .card-container{
+      display:grid;
+    }
+    .card{
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 20px 0 0 20px;
+      background: #F3F5E4;
+      margin-bottom: 20px;
+    }
+
+    .card:hover{
+      background: var(--primary);
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .card-container{
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+</style>
