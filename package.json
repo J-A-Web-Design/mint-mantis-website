@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.8",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.2",
@@ -18,7 +18,7 @@
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource/inria-sans": "^5.0.14",
     "@playform/compress": "^0.1.1",
-    "astro": "^4.16.6",
+    "astro": "^4.16.13",
     "tailwindcss": "^3.4.9"
   },
   "devDependencies": {
