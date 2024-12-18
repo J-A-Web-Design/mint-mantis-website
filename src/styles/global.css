@@ -5,7 +5,7 @@
   --secondary: #24251c;
   --secondaryLight: #484a38;
   --headerColor: #1a1a1a;
-  --bodyTextColor: #26271F;
+  --bodyTextColor: #1A1A1A;
   --bodyTextColorWhite: #F3F5E4;
   --bgColor: #fdffed;
   --bgColor2: #26271F;
@@ -58,7 +58,7 @@ body {
 
 .cs-title {
   font-size: var(--headerFontSize);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2em;
   text-align: inherit;
   max-width: 48rem;
