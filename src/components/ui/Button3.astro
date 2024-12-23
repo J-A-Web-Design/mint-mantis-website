@@ -1,0 +1,28 @@
+---
+const {title, link } = Astro.props;
+---
+<a href={link} class="cs-button-solid2 font-bold">{title}</a>
+<style>
+      .cs-button-solid2 {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background: none;
+        border-radius: 8px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    .cs-button-solid2:hover{
+      color: #95AA26;
+      background-color: var(--bodyTextColorWhite);
+      }
+</style>

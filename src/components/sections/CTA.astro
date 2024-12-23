@@ -1,3 +1,7 @@
+---
+import Button2 from "../ui/Button2.astro";
+---
+
 <!-- ============================================ --><!--                     CTA                      --><!-- ============================================ -->
 <section id="cta-1693">
   <div class="cs-container">
@@ -15,11 +19,11 @@
         positive impact on the regions we serve.
       </p>
     </div>
-    <!-- <div class="max-w-screen-xl flex text-right flex-row items-end justify-end">
-      <div class="block">
-        <a href="" class="block text-white">See More</a>
+    <div class="flex justify-end pb-9">
+      <div style="position: absolute; right: 0;">
+        <Button2 title="See more" link="#"/>
       </div>
-    </div> -->
+  </div>
   </div>
 </section>
 
@@ -78,7 +82,6 @@
     #cta-1693 .cs-title {
       max-width: 30ch;
       margin: 0;
-      font-weight: 400;
       color: var(--bodyTextColorWhite);
       text-transform: uppercase;
     }
