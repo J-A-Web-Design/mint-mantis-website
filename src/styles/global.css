@@ -5,7 +5,7 @@
   --secondary: #24251c;
   --secondaryLight: #484a38;
   --headerColor: #1a1a1a;
-  --bodyTextColor: #1A1A1A;
+  --bodyTextColor: #1a1a1a;
   --bodyTextColorWhite: #F3F5E4;
   --bgColor: #fdffed;
   --bgColor2: #26271F;
@@ -200,6 +200,7 @@ hr {
  .cs-button-solid:hover{
   color: var(--bodyTextColor);
   background-color: #C9DF4D !important;
+  transition-delay: 150ms !important;
 }
 
   
