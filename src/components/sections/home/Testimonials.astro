@@ -1,10 +1,11 @@
+
 <!-- ============================================ --><!--                   Reviews                    --><!-- ============================================ -->
 <section id="reviews-67">
   <div class="cs-container">
     <div class="cs-content">
       <h2 class="cs-title uppercase">Testimonials</h2>
     </div>
-    <ul class="cs-card-group">
+    <ul class="cs-card-group owl-carousel" id="customers-testimonials">
       <!-- Review 1 -->
       <li class="cs-item">
         <div class="left">
@@ -76,9 +77,39 @@
           </p>
         </div>
       </li>
+
+     
+       <li class="cs-item">
+        <div class="left">
+          <img
+            class="cs-item-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://ik.imagekit.io/boxhuwbys/abriella-mint-mantis.webp"
+            alt="profile picture"
+            width="150"
+            height="150"
+          />
+          <div class="cs-info">
+            <div class="cs-flex-group">
+              <span class="cs-name">Abriella Milazzo</span>
+              <span class="cs-desc"
+                >Early Childhood Educator & Yoga Specialist</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <p class="cs-item-text">
+            Mint Mantis has been just the team I was looking for! As a multidisciplinary artist, I have struggled for years finding ways to package up my skills into a concise manner that really showcases the value I can provide to my community and beyond. Each time we connect, I receive more clarity. Their team has not only been a great support but has continuously inspired me to keep striving for the bigger picture- my mission. The possibilities for success as an artist are limitless, especially when you have the right people in your corner. I hope my words help you to take your next step, but more importantly I think you should experience Mint Mantis yourself- a new journey awaits!  
+          </p>
+        </div>
+      </li>
     </ul>
   </div>
 </section>
+
 <style>
   /*-- -------------------------- -->
 <---          Reviews           -->
@@ -235,4 +266,64 @@
       margin: 0 0 -8rem !important;
     }
   }
+
+
+  .owl-carousel .owl-nav [class*='owl-'] {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.owl-carousel .owl-nav [class*='owl-'].disabled:hover {
+  background-color: #D6D6D6;
+}
+.owl-carousel {
+  position: relative;
+}
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+  width: 50px;
+  height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+  position: absolute;
+  top: 30%;
+	font-size: 20px;
+  color: #fff;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.owl-carousel .owl-prev {
+  left: -70px;
+}
+.owl-carousel .owl-next {
+  right: -70px;
+}
+
 </style>
+<script>
+  jQuery(document).ready(function($) {
+"use strict";
+$('#customers-testimonials').owlCarousel( {
+		loop: true,
+		center: true,
+		items: 3,
+		margin: 30,
+		autoplay: true,
+		dots:true,
+    nav:true,
+		autoplayTimeout: 8500,
+		smartSpeed: 450,
+  	navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			1170: {
+				items: 3
+			}
+		}
+	});
+});
+</script>
