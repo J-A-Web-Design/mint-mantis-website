@@ -5,11 +5,15 @@
 <section id="hero-1426">
     <div class="cs-container">
         <div class="cs-content">
-          <img src="https://ik.imagekit.io/azupnt3mqx/Mint-Mantis-logo.webp" alt="Mint Mantis Logo" class="w-1/4 mx-auto" height="157.5" width="97.6">
+          <img src="https://ik.imagekit.io/azupnt3mqx/Mint-Mantis-logo.webp?tr=w-340,h-211" alt="Mint Mantis Logo" class="w-1/4 mx-auto" height="157.5" width="97.6">
             <h2 class="cs-title">Mint Mantis</h2>
             <p class="cs-text">
               Turning creative ideas into self-sustaining art and literature
             </p>
+            <div class="cs-button-group">
+              <a href="/for-authors" class="cs-button-solid">Submit Your Book</a>
+              <a href="#" class="cs-button-solid cs-button1">Become an Artist</a>
+            </div>
         </div>
     </div>
 
@@ -17,7 +21,7 @@
     <picture class="cs-background">
         <source media="(max-width: 600px)" srcset="/hero_bg.webp">
         <source media="(min-width: 601px)" srcset="/hero_bg.webp">
-        <img decoding="async" src="/hero_bg.webp" alt="Mint Mantis - Gradient Background" width="1920" height="1200" aria-hidden="true">
+        <img decoding="async" fetchpriority="high" src="/hero_bg.webp" alt="Mint Mantis - Gradient Background" width="1920" height="1200" aria-hidden="true">
     </picture>
 </section>
                                 
@@ -146,6 +150,7 @@
     z-index: 1;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
+    transition: color 0.3s;
   }
   #hero-1426 .cs-button-solid:before {
     content: "";
@@ -163,8 +168,12 @@
   #hero-1426 .cs-button-solid:hover:before {
     width: 100%;
   }
+  #hero-1426 .cs-button-solid:hover {
+    color: var(--bodyTextColorWhite);
+  }
   #hero-1426 .cs-button1 {
-    background-color: var(--secondary);
+    background-color: #fff;
+    color: #1a1a1a;
   }
 }
                                                         
