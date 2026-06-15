@@ -21,6 +21,10 @@ const {title, link } = Astro.props;
         z-index: 1;
         /* prevents padding from adding to the width */
         box-sizing: border-box;
+        transition: color 0.3s;
+    }
+    .cs-button-solid:hover {
+        color: var(--bodyTextColorWhite);
     }
 
 </style>

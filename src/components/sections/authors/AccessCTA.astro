@@ -104,12 +104,17 @@
       min-width: 9.375rem;
       padding: 0 1.5rem;
       background-color: var(--primaryLight);
+      border: none;
       border-radius: 0.25rem;
       display: inline-block;
       position: relative;
       z-index: 1;
       /* prevents padding from adding to the width */
       box-sizing: border-box;
+      transition: color 0.3s;
+    }
+    #cta-301 .cs-button-solid:hover {
+      color: var(--bodyTextColorWhite);
     }
    
     #cta-301 .cs-submit {
